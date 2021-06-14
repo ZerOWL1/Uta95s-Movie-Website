@@ -1,6 +1,6 @@
 USE [UTA95S_MOVIE_WEB]
 GO
-/****** Object:  Table [dbo].[ACTOR]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[ACTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16,7 +16,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[DIRECTOR]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[DIRECTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -32,7 +32,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[FAVORITE_MOVIES]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[FAVORITE_MOVIES]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -48,7 +48,7 @@ CREATE TABLE [dbo].[FAVORITE_MOVIES](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[GENRE]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[GENRE]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -63,7 +63,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIE_ACTOR]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[MOVIE_ACTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -79,7 +79,7 @@ CREATE TABLE [dbo].[MOVIE_ACTOR](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIE_DIRECTOR]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[MOVIE_DIRECTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -95,7 +95,7 @@ CREATE TABLE [dbo].[MOVIE_DIRECTOR](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIE_GENRE]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[MOVIE_GENRE]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -111,18 +111,13 @@ CREATE TABLE [dbo].[MOVIE_GENRE](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIES]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[MOVIES]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[MOVIES](
 	[MID] [int] IDENTITY(1,1) NOT NULL,
-	[GID] [int] NULL,
-	[AID] [int] NULL,
-	[DID] [int] NULL,
-	[SID] [int] NULL,
-	[Title] [nvarchar](255) NULL,
 	[Description] [nvarchar](max) NULL,
 	[Nationality] [nvarchar](50) NULL,
 	[Languages] [nvarchar](50) NULL,
@@ -138,7 +133,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[RATE]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[RATE]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +154,7 @@ CREATE TABLE [dbo].[RATE](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[STATUS]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[STATUS]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -174,7 +169,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[USERM]    Script Date: 6/14/2021 5:26:25 PM ******/
+/****** Object:  Table [dbo].[USERM]    Script Date: 6/14/2021 10:04:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -236,18 +231,6 @@ ALTER TABLE [dbo].[MOVIE_GENRE]  WITH CHECK ADD  CONSTRAINT [FK__MOVIE_GENRE__MI
 REFERENCES [dbo].[MOVIES] ([MID])
 GO
 ALTER TABLE [dbo].[MOVIE_GENRE] CHECK CONSTRAINT [FK__MOVIE_GENRE__MID__31EC6D26]
-GO
-ALTER TABLE [dbo].[MOVIES]  WITH CHECK ADD FOREIGN KEY([AID])
-REFERENCES [dbo].[ACTOR] ([AID])
-GO
-ALTER TABLE [dbo].[MOVIES]  WITH CHECK ADD FOREIGN KEY([DID])
-REFERENCES [dbo].[DIRECTOR] ([DID])
-GO
-ALTER TABLE [dbo].[MOVIES]  WITH CHECK ADD FOREIGN KEY([GID])
-REFERENCES [dbo].[GENRE] ([GID])
-GO
-ALTER TABLE [dbo].[MOVIES]  WITH CHECK ADD FOREIGN KEY([SID])
-REFERENCES [dbo].[STATUS] ([SID])
 GO
 ALTER TABLE [dbo].[RATE]  WITH CHECK ADD  CONSTRAINT [FK__RATE__MID__2C3393D0] FOREIGN KEY([MID])
 REFERENCES [dbo].[MOVIES] ([MID])
