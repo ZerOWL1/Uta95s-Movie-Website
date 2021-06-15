@@ -1,38 +1,38 @@
 USE [UTA95S_MOVIE_WEB]
 GO
-/****** Object:  Table [dbo].[ACTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[ACTOR]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ACTOR](
-	[AID] [int] NOT NULL,
+	[AID] [int] IDENTITY(1,1) NOT NULL,
 	[AcName] [nvarchar](100) NULL,
 	[AcWiki] [nvarchar](max) NULL,
-PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK__ACTOR__C69007C88F310D1C] PRIMARY KEY CLUSTERED 
 (
 	[AID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[DIRECTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[DIRECTOR]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[DIRECTOR](
-	[DID] [int] NOT NULL,
+	[DID] [int] IDENTITY(1,1) NOT NULL,
 	[DiName] [nvarchar](100) NULL,
 	[DiNationality] [nvarchar](50) NULL,
-PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK__DIRECTOR__C03656309C357919] PRIMARY KEY CLUSTERED 
 (
 	[DID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[FAVORITE_MOVIES]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[FAVORITE_MOVIES]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -48,7 +48,7 @@ CREATE TABLE [dbo].[FAVORITE_MOVIES](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[GENRE]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[GENRE]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -63,7 +63,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIE_ACTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[MOVIE_ACTOR]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -79,7 +79,7 @@ CREATE TABLE [dbo].[MOVIE_ACTOR](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIE_DIRECTOR]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[MOVIE_DIRECTOR]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -95,7 +95,20 @@ CREATE TABLE [dbo].[MOVIE_DIRECTOR](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIE_GENRE]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[MOVIE_EPISODE]    Script Date: 6/16/2021 12:09:51 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[MOVIE_EPISODE](
+	[MID] [int] NOT NULL,
+	[Episode] [int] NULL,
+	[Title] [nvarchar](255) NULL,
+	[Episode_Link] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[MOVIE_GENRE]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -111,35 +124,37 @@ CREATE TABLE [dbo].[MOVIE_GENRE](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[MOVIES]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[MOVIES]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[MOVIES](
 	[MID] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](255) NULL,
 	[Description] [nvarchar](max) NULL,
+	[Episode] [int] NULL,
 	[Nationality] [nvarchar](50) NULL,
 	[Languages] [nvarchar](50) NULL,
 	[Release] [nvarchar](50) NULL,
 	[MovieLink] [nvarchar](max) NULL,
 	[Lenght] [nvarchar](50) NULL,
-	[View] [int] NULL,
+	[View] [int] NULL CONSTRAINT [DF__MOVIES__View__1A14E395]  DEFAULT ((0)),
 	[DateADD] [datetime] NULL,
-PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK__MOVIES__C797348A9E691F65] PRIMARY KEY CLUSTERED 
 (
 	[MID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[RATE]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[RATE]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[RATE](
-	[RID] [int] NOT NULL,
+	[RID] [int] IDENTITY(1,1) NOT NULL,
 	[UID] [int] NOT NULL,
 	[MID] [int] NOT NULL,
 	[Point] [int] NULL,
@@ -154,7 +169,7 @@ CREATE TABLE [dbo].[RATE](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[STATUS]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[STATUS]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -169,7 +184,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[USERM]    Script Date: 6/14/2021 10:04:34 PM ******/
+/****** Object:  Table [dbo].[USERM]    Script Date: 6/16/2021 12:09:51 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -187,10 +202,6 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-GO
-INSERT [dbo].[DIRECTOR] ([DID], [DiName], [DiNationality]) VALUES (1, N'Shinkai Makoto', N'Japan')
-INSERT [dbo].[DIRECTOR] ([DID], [DiName], [DiNationality]) VALUES (2, N'Miyazaki Hayao', N'Japan')
-ALTER TABLE [dbo].[MOVIES] ADD  DEFAULT ((0)) FOR [View]
 GO
 ALTER TABLE [dbo].[FAVORITE_MOVIES]  WITH CHECK ADD  CONSTRAINT [FK__FAVORITE_MO__MID__2F10007B] FOREIGN KEY([MID])
 REFERENCES [dbo].[MOVIES] ([MID])
@@ -221,6 +232,11 @@ ALTER TABLE [dbo].[MOVIE_DIRECTOR]  WITH CHECK ADD  CONSTRAINT [FK__MOVIE_DIREC_
 REFERENCES [dbo].[MOVIES] ([MID])
 GO
 ALTER TABLE [dbo].[MOVIE_DIRECTOR] CHECK CONSTRAINT [FK__MOVIE_DIREC__MID__37A5467C]
+GO
+ALTER TABLE [dbo].[MOVIE_EPISODE]  WITH CHECK ADD  CONSTRAINT [FK_MOVIE_EPISODE_MOVIES1] FOREIGN KEY([MID])
+REFERENCES [dbo].[MOVIES] ([MID])
+GO
+ALTER TABLE [dbo].[MOVIE_EPISODE] CHECK CONSTRAINT [FK_MOVIE_EPISODE_MOVIES1]
 GO
 ALTER TABLE [dbo].[MOVIE_GENRE]  WITH CHECK ADD  CONSTRAINT [FK__MOVIE_GENRE__GID__30F848ED] FOREIGN KEY([GID])
 REFERENCES [dbo].[GENRE] ([GID])
