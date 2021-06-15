@@ -1,1 +1,110 @@
 
+@media(min-width: 1401px) and (max-width: 1600px) {
+    
+
+    .section #halfmoon {
+        width: 60%;
+        top: -23%;
+    }
+
+
+    .section #grass2 {
+        top: 55%;
+    }
+
+    .section #tree {
+        top: 15%;
+    }
+
+    .section #grass1 {
+        top: 40%;
+    }
+
+    .section #screen {
+        width: 70%;
+        top: 31%;
+        right: 32%;
+    }
+
+    .section #people {
+        top: 52%;
+    }
+
+    .section #grass3 {
+        top: 60%;
+    }
+}
+
+@media(min-width: 1601px) and (max-width: 1800px) {
+
+
+    .section #halfmoon {
+        top: -23%;
+        width: 85%;
+        left: 15%;
+    }
+
+
+    .section #grass2 {
+        top: 50%;
+    }
+
+    .section #tree {
+        top: 10%;
+    }
+
+    .section #grass1 {
+        top: 35%;
+    }
+
+    .section #screen {
+        width: 65%;
+        top: 35%;
+        right: 37%;
+    }
+
+    .section #people {
+        top: 55%;
+    }
+
+    .section #grass3 {
+        top: 60%;
+    }
+}
+
+@media(min-width: 1801px) and (max-width: 2000px) {
+
+
+    .section #halfmoon {
+        top: -25%;
+        width: 85%;
+        left: 15%;
+    }
+
+
+    .section #grass2 {
+        top: 50%;
+    }
+
+    .section #tree {
+        top: 15%;
+    }
+
+    .section #grass1 {
+        top: 35%;
+    }
+
+    .section #screen {
+        width: 65%;
+        top: 32%;
+        left: -2%;
+    }
+
+    .section #people {
+        top: 60%;
+    }
+
+    .section #grass3 {
+        top: 60%;
+    }
+}
