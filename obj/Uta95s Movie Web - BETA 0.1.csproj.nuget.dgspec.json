@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s Movie Web - BETA 0.1\\Uta95s Movie Web - BETA 0.1.csproj": {}
+    "C:\\Users\\Chien\\Desktop\\PRN_Project\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s Movie Web - BETA 0.1\\Uta95s Movie Web - BETA 0.1.csproj": {
+    "C:\\Users\\Chien\\Desktop\\PRN_Project\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s Movie Web - BETA 0.1\\Uta95s Movie Web - BETA 0.1.csproj",
+        "projectUniqueName": "C:\\Users\\Chien\\Desktop\\PRN_Project\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
         "projectName": "Uta95s Movie Web - BETA 0.1",
-        "projectPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s Movie Web - BETA 0.1\\Uta95s Movie Web - BETA 0.1.csproj",
-        "packagesPath": "C:\\Users\\Ryuu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s Movie Web - BETA 0.1\\obj\\",
+        "projectPath": "C:\\Users\\Chien\\Desktop\\PRN_Project\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
+        "packagesPath": "C:\\Users\\Chien\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chien\\Desktop\\PRN_Project\\Uta95s-Movie-Website\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ryuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -61,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
