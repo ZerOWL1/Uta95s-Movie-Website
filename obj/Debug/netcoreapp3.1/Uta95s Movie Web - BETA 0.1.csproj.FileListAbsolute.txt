@@ -85,8 +85,6 @@ C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\D
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csprojAssemblyReference.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.AssemblyInfoInputs.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.AssemblyInfo.cs
-C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csproj.CoreCompileInputs.cache
-C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.RazorAssemblyInfo.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.RazorAssemblyInfo.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.TagHelpers.input.cache
@@ -110,3 +108,22 @@ C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\D
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_IndexLayout.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\IndexLayout\indexFooter.cshtml.g.cs
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\DAL Database.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\DAL Database.pdb
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csproj.CoreCompileInputs.cache
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.MvcApplicationPartsAssemblyInfo.cache

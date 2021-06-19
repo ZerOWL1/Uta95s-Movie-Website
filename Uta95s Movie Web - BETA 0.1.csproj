@@ -7,10 +7,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Database\DataSet\" />
+    <ProjectReference Include="..\3. DAL Database\DAL Database\DAL Database.csproj" />
   </ItemGroup>
 
 </Project>
