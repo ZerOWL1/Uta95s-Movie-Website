@@ -1411,6 +1411,19 @@ header {
     transition: all ease 1s;
 }
 
+<<<<<<< HEAD
+=======
+.sec4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #fff, transparent);
+}
+
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
     .sec4-boxes .img img {
         height: 100%;
         width: 100%;
@@ -1421,6 +1434,7 @@ header {
     opacity: 1;
 }
 
+<<<<<<< HEAD
 @media(max-width: 750px) {
     .sec4 .box {
         width: 47%;
@@ -1440,6 +1454,11 @@ header {
 /* SwipperJS here */
 .swipper-article {
     margin-top: 70px;
+=======
+
+/* SwipperJS here */
+.swipper-article {
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #fff;
@@ -1520,8 +1539,12 @@ header {
 }
 
 .site-footer {
+<<<<<<< HEAD
     padding-top: 1px;
     background-color: #131B30;
+=======
+    background-color: #000;
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
@@ -1529,10 +1552,14 @@ header {
 }
 
     .site-footer h6 {
+<<<<<<< HEAD
         background-color: #4d5dfb;
         background-image: linear-gradient(315deg, #4d5dfb 0%, #08c8f6 74%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+=======
+        color: #54e346;
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
         font-size: 20px;
         text-transform: uppercase;
         margin-top: 5px;
@@ -1541,6 +1568,10 @@ header {
 
     .site-footer a {
         text-decoration: none;
+<<<<<<< HEAD
+=======
+        color: #54e346;
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
         transition: 1s;
     }
 
@@ -1594,6 +1625,7 @@ header {
     margin: 0
 }
 
+<<<<<<< HEAD
     .copyright-text a {
         text-decoration: none;
         background-color: #0abcf9;
@@ -1602,6 +1634,8 @@ header {
         -webkit-text-fill-color: transparent;
     }
 
+=======
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
 @media (max-width:991px) {
     .site-footer [class^=col-] {
         margin-bottom: 30px
@@ -1613,12 +1647,17 @@ header {
         padding-bottom: 0
     }
 
+<<<<<<< HEAD
         .site-footer .container .copyright-text {
             text-align: center;
         }
 
         .site-footer .copyright-text, .site-footer .social-icons {
             text-align: center;
+=======
+        .site-footer .copyright-text, .site-footer .social-icons {
+            text-align: center
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
         }
 }
 
@@ -1694,6 +1733,11 @@ header {
 }
 
 .site-footer hr {
+<<<<<<< HEAD
     opacity: 1;
     background: linear-gradient(to left, transparent, #fff, transparent);
 }
+=======
+    color: #0f0;
+}
+>>>>>>> 18afbe9ad8b4cef038f66f520c538eae2c9bf8d4
