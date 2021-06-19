@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="lib/download/carouselV1.8/slick.min.css" />
     <link rel="stylesheet" href="lib/download/carouselV1.8/slick-theme.min.css"/>
     <link rel="stylesheet" href="lib/download/aosV2.3/aos.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- css -->
     <link rel="stylesheet" href="css/indexSite.css"/>
     <!-- js -->
@@ -50,7 +51,7 @@
     <div class="content">
         @RenderBody()
     </div>
-    <footer>
+    <footer class="footer-container">
         <partial name="IndexLayout/indexFooter"/>
     </footer>
 </div>
@@ -60,10 +61,43 @@
 <script src="lib/download/jqueryV3/jquery.min.js"></script>
 <script src="lib/download/letteringV0.7/jquery.lettering.min.js"></script>
 <script src="lib/download/carouselV1.8/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="lib/download/aosV2.3/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/c41956cca0.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/site.js"></script>
 <script>
+    //SwipperJS
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        mousewheel: {
+            invert: true
+        }
+        //                pagination: {
+        //                    el: '.swiper-pagination'  //indicators
+        //                }
+    });
+
+
     //AOS
     AOS.init({
         duration: 1500 //global duration
