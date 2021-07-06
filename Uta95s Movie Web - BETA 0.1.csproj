@@ -14,4 +14,8 @@
     <ProjectReference Include="..\3. DAL Database\DAL Database\DAL Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\sources\logo\" />
+  </ItemGroup>
+
 </Project>

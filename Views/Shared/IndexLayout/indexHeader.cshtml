@@ -68,15 +68,16 @@
 
             <div class="form-inner">
                 <!-- form login -->
-                <form action="login" class="login" method="post">
+                @*asp-route / asp-controller / asp-action here*@
+                <form asp-route="/home" class="login" method="post" enctype="multipart/form-data">
                    @* <div class="wrong-pass">
                         <p class="wrong-title">${mess}</p>
                     </div>*@
                     <div class="field field-input">
-                        <input name="user" type="email" placeholder="Email" required/>
+                        <input @*asp-for="email"*@ name="email" type="email" placeholder="Email" required/>
                     </div>
                     <div class="field field-input">
-                        <input id="passwords" name="pass" type="password" placeholder="Passwords" required/>
+                        <input @*asp-for="passwords"*@ name="pass" id="passwords" type="password" placeholder="Passwords" required/>
                     </div>
                     <div class="show-pass">
                         <input type="checkbox" onclick="checkPass()">
@@ -89,38 +90,41 @@
                     <!--captcha here-->
                     <div class="g-recaptcha" data-sitekey="6Lern4AaAAAAAHcDkthqGVzuJ24Qq6_WIGhFSAyn"
                          data-theme="dark" data-size="normal"></div>
-                    <div class="field field-submit">
-                        <a href="#"><input type="submit" value="Login"/></a>
-                    </div>
+                   <div class="field field-submit">
+                       @*asp-route / asp-controller / asp-action here*@
+                       <a><input type="submit" value="Login"/></a>
+                   </div>
 
                     <div class="signup-link">
                         <span>Not a member?</span>&nbsp<a href="#" alt="#" class="">Signup Now</a>
                     </div>
-                    <div class="guess-link">
-                        <span>Join with guest account</span>&nbsp
-                        <a asp-controller="Home" asp-action="Home" alt="guess" class="">GUEST NOW!</a>
-                    </div>
+                   <div class="guess-link">
+                       <span>Join with guest account</span>&nbsp
+                       <a asp-route="home" alt="guest" class="">GUEST NOW!</a>
+                   </div>
                 </form>
 
                 <!-- form sign up -->
-                <form action="signup" class="signup" method="post">
+                @*asp-route / asp-controller / asp-action here*@
+                <form asp-controller="Home" asp-action="RandomCode" class="signup" method="post" enctype="multipart/form-data">
                     @*<div class="wrong-repass">
                         <p class="wrong-title">${remess}</p>
                     </div>*@
                     <div class="field field-input">
-                        <input name="user" type="email" placeholder="Email" required/>
+                        <input @*asp-for="emailSign"*@ name="emailSign" type="email" placeholder="Email" required/>
                     </div>
                     <div class="field field-input">
-                        <input name="pass" type="password" placeholder="Passwords" required/>
+                        <input @*asp-for="passSign"*@ name="pass" type="password" placeholder="Passwords" required/>
                     </div>
                     <div class="field field-input">
-                        <input name="repass" type="password" placeholder="Confirm passwords" required/>
+                        <input @*asp-for="repassSign"*@ name="repass" type="password" placeholder="Confirm passwords" required/>
                     </div>
                     <div class="block-space"></div>
                     <div class="g-recaptcha" data-sitekey="6Lern4AaAAAAAHcDkthqGVzuJ24Qq6_WIGhFSAyn"
                          data-theme="dark" data-size="normal"></div>
                     <div class="field field-submit">
-                        <a href="#"><input type="submit" value="Signup"/></a>
+                        @*asp-route / asp-controller / asp-action here*@
+                        <a><input type="submit" value="Signup"/></a>
                     </div>
                 </form>
             </div>

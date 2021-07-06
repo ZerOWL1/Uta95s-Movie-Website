@@ -596,8 +596,9 @@ header {
         }
 
         .section #screen {
-            top: 55%;
-            right: 15%;
+            width: 80%;
+            top: 60%;
+            right: 25%;
         }
 
         .section #people {
@@ -684,7 +685,6 @@ header {
 
     .section #halfmoon {
         width: 60%;
-        top: -15%;
         right: 10%;
     }
 
@@ -694,28 +694,29 @@ header {
     }
 
     .section #grass2 {
-        top: 40%;
+        top: 55%;
     }
 
     .section #tree {
-        top: 15%;
+        top: 35%;
     }
 
     .section #grass1 {
-        top: 45%;
+        top: 55%;
     }
 
     .section #screen {
         width: 80%;
-        top: 25%;
+        right: 25%;
+        top: 44%;
     }
 
     .section #people {
-        top: 60%;
+        top: 65%;
     }
 
     .section #grass3 {
-        top: 70%;
+        top: 75%;
     }
 }
 
@@ -771,10 +772,8 @@ header {
 
 @media(min-width: 1401px) and (max-width: 1600px) {
 
-
     .section #halfmoon {
         width: 60%;
-        top: -23%;
     }
 
 
@@ -783,25 +782,25 @@ header {
     }
 
     .section #tree {
-        top: 15%;
+        top: 30%;
     }
 
     .section #grass1 {
-        top: 40%;
+        top: 50%;
     }
 
     .section #screen {
         width: 70%;
-        top: 31%;
+        top: 44%;
         right: 32%;
     }
 
     .section #people {
-        top: 52%;
+        top: 64%;
     }
 
     .section #grass3 {
-        top: 60%;
+        top: 70%;
     }
 }
 

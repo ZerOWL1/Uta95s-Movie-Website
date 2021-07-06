@@ -17,6 +17,10 @@
     {
       "library": "aos@2.3.4",
       "destination": "wwwroot/lib/download/aosV2.3/"
+    },
+    {
+      "library": "OwlCarousel2@2.3.4",
+      "destination": "wwwroot/lib/download/owl2V2.3.4/"
     }
   ]
 }

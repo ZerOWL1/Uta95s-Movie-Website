@@ -20,11 +20,16 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
             _logger = logger;
         }
 
+        [Route("/home", Name = "home")]
         public IActionResult Home()
         {
             //List<Actor> list = actDAO.GetDirectors();
             return View();
         }
-            
+
+        public IActionResult RandomCode()
+        {
+            return View();
+        }
     }
 }
