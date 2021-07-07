@@ -125,9 +125,15 @@ C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\D
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csproj.CoreCompileInputs.cache
-C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\HomeLayout\homeFooter.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\HomeLayout\homeHeader.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\web.config
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csproj.CoreCompileInputs.cache
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Mail.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s Movie Web - BETA 0.1\obj\Debug\netcoreapp3.1\Razor\Views\Home\RandomCode.cshtml.g.cs

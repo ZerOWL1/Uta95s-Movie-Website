@@ -7,18 +7,21 @@
     <div class="lateCD">
         <div class="lateCD-title">
             <div class="cd-container">
-                <p class="altitle">Verification&nbsp;Code</p>
+                <p class="altitle">Contact&nbsp;Us</p>
             </div>
         </div>
+
+        <!--contact note-->
         <div class="contact-container">
             <div class="form">
                 <div class="contact-info">
-                    <h3 class="title">Hi there! Please enter code we sent you.</h3>
-                    <p class="text">
-                        We already send mail to you!! Please enter code or check your mail again!!
+                    <h3 class="title">Hi there! Fill this form to Contact Us</h3>
+                    <p class="text">We are merely functioning as an index of content found publicly on the 
+                        Internet and does not accept responsibility for content hosted on third-party websites. 
+                        All trademarks, logos, and images are the property of their respective and rightful owners.
                     </p>
                     <div class="contact-icon">
-                        <img src="~/sources/images/gif/mail_icon.gif" alt=""/>
+                        <img src="~/sources/images/gif/contact.gif" alt=""/>
                     </div>
                     <div class="social-media">
                         <p>Connect with us :</p>
@@ -44,21 +47,38 @@
                 <div class="contact-form">
                     <span class="circle one"></span>
                     <span class="circle two"></span>
-                    <form asp-route="code" method="post" enctype="multipart/form-data">
-                        <h3 class="title">Enter Your Code</h3>
+                    <!--contact mail api-->
+                    <form action="https://formspree.io/f/meqpyoop" method="post" enctype="multipart/form-data">
+                        <h3 class="title">Contact us</h3>
                         <div class="input-container">
-                            <input @*asp-for="randomcode"*@ type="text" name="randomCode" class="input" required="">
-                            <label for="">Random Code</label>
-                            <span>&nbsp;Random Code&nbsp;</span>
+                            <input type="text" name="name" class="input" required="">
+                            <label for="">Username</label>
+                            <span>&nbsp;Username&nbsp;</span>
                         </div>
-                        <div class="random-btn">
-                            <input type="submit" value="Send" class="btn">
-                            <a href="#" title="re-send" class="btn">RE-SEND</a>
+                        <div class="input-container">
+                            <input type="email" name="email" class="input" required="">
+                            <label for="">Email</label>
+                            <span>&nbsp;Email&nbsp;</span>
                         </div>
+                        <div class="input-container">
+                            <input type="tel" name="phone" class="input">
+                            <label for="">Phone</label>
+                            <span>&nbsp;Phone&nbsp;</span>
+                        </div>
+                        <div class="input-container textarea">
+                            <textarea name="message" class="input" required=""></textarea>
+                            <label for="">Message</label>
+                            <span>&nbsp;Message&nbsp;</span>
+                        </div>
+                        <input type="submit" value="Send" class="btn">
                     </form>
                 </div>
             </div>
         </div>
     </div>       
 </div>
+
+
+
+
 

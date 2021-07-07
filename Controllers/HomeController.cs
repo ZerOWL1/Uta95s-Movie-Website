@@ -27,6 +27,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
             return View();
         }
 
+        [Route("/mail", Name = "mail")]
+        public IActionResult Mail()
+        {
+            return View();
+        }
+
+        [Route("/code", Name = "code")]
         public IActionResult RandomCode()
         {
             return View();

@@ -12,20 +12,21 @@
                 <img src="~/sources/icon/logo_home2.png" alt="logo"/>
             </li>
             <li class="nav_li ">
-                <a asp-controller="Home" asp-action="RandomCode" class="nav__link nav_link_home">Home</a>
+                <a asp-route="default" class="nav__link nav_link_home">Preview</a>
+            </li>
+            <li class="nav_li ">
+                <a asp-route="home" class="nav__link">Home</a>
             </li>
             <li class="nav_li dropdown">
                 <label for="cateDropdown" class="nav__link">Category</label>
             </li>
             <li class="nav_li">
-                <a href="#" class="nav__link">FAQ</a>
-            </li>
-            <li class="nav_li">
-                <a href="#" class="nav__link">Guide</a>
+                <a href="https://www.termsfeed.com/live/e3c51e1f-dd04-4568-ba9d-617bca9d4c5d" 
+                   class="nav__link">FAQ</a>
             </li>
             <li class="nav_li">
                 @*change to contact page here*@
-                <a href="#" class="nav__link">Contact</a>
+                <a asp-route="mail" class="nav__link">Contact</a>
             </li>
             <form action="" class="form-search d-flex" enctype="" method="post">
                 <input class="form-control" 
@@ -75,22 +76,22 @@
     <nav class="nav__mobile">
         <ul class="nav__mobile-list">
             <li class="nav__mobile_li li1">
-                <a href="" class="nav__mobile-link">Home</a>
+                <a asp-route="default" class="nav__mobile-link">Preview</a>
             </li><hr class="hr-nav1"/>
+            <li class="nav__mobile_li li4">
+                <a asp-route="home" class="nav__mobile-link">Home</a>
+            </li><hr class="hr-nav4"/>
             <label for="cateMobile" class="nav__mobile_li li2">
                 <div class="nav__mobile-link">Category</div>
             </label><hr class="hr-nav2"/>
             <input type="checkbox" class="checkCateMobile" id="cateMobile" name="" hidden=""/>
-
             <li class="nav__mobile_li li3">
-                <a href="" class="nav__mobile-link">FAQ</a>
+                <a href="https://www.termsfeed.com/live/e3c51e1f-dd04-4568-ba9d-617bca9d4c5d" 
+                   class="nav__mobile-link">FAQ</a>
             </li><hr class="hr-nav3"/>
-            <li class="nav__mobile_li li4">
-                <a href="" class="nav__mobile-link">Guide</a>
-            </li><hr class="hr-nav4"/>
             <li class="nav__mobile_li li5">
                 @*change to contact page here*@
-                <a href="#" class="nav__mobile-link">Contact</a>
+                <a asp-route="mail" class="nav__mobile-link">Contact</a>
             </li><hr class="hr-nav5"/>
         </ul>
         <div class="icon-bar">
