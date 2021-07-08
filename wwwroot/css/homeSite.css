@@ -828,8 +828,7 @@ cate-mobile-header:hover {
     left: calc(75% - 80px / 2);
     width: 250px;
     height: 150px;
-    background: url(../sources/images/slide/slide-demo.jpg);
-    background-size: cover;
+    
     cursor: pointer;
     animation: animate 25s linear infinite;
 }

@@ -2,6 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    Layout = null;
 }
 
 <div class="nav">
@@ -144,18 +145,16 @@
                 </label>
                 <div class="row g-1 cate-mobile-container">
                     @*foreach here*@
-                    <a class="col-3 cate-mobile-item">
-                        <div class="p-2 item-mobile-value">Drama</div>
-                    </a>
-                    <a class="col-3 cate-mobile-item">
-                        <div class="p-2 item-mobile-value">Action</div>
-                    </a>
-                    <a class="col-3 cate-mobile-item">
-                        <div class="p-2 item-mobile-value">Shounen</div>
-                    </a>
-                    <a class="col-3 cate-mobile-item">
-                        <div class="p-2 item-mobile-value">Shoujo</div>
-                    </a>
+
+                    @{
+                        foreach (var item in ViewBag.Genre)
+                        {
+                            <a class="col-3 cate-mobile-item">
+                               <div class="p-2 item-mobile-value">@item.GName</div>
+                            </a>
+                        }
+                    }
+
                 </div>
             </div>
 
@@ -180,28 +179,18 @@
 <input id="cateDropdown" type="checkbox" name="" hidden=""/>
 <ul class="cateDrop_pc" aria-labelledby="cateDropdown">
     @*for each here*@
+
     <div class="row g-1 row-cate">
-        <a class="col-2 cate-item">
-            <div class="p-2 item-value">Drama</div>
-        </a>
-        <a class="col-2 cate-item">
-            <div class="p-2 item-value">Action</div>
-        </a>
-        <a class="col-2 cate-item">
-            <div class="p-2 item-value">Shounen</div>
-        </a>
-        <a class="col-2 cate-item">
-            <div class="p-2 item-value">Shoujo</div>
-        </a>
-        <a class="col-2 cate-item">
-            <div class="p-2 item-value">Adventure</div>
-        </a>
-        <a class="col-2 cate-item">
-            <div class="p-2 item-value">Isekai</div>
-        </a>
-        <a class="col-2 cate-mobile-item">
-            <div class="p-2 item-mobile-value">Demo</div>
-        </a>
+
+        @{
+            foreach (var item in ViewBag.Genre)
+            {
+                <a class="col-2 cate-item">
+                    <div class="p-2 item-value">@item.GName</div>
+                </a>
+            }
+        }
+
     </div>
 </ul>
 

@@ -17,13 +17,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
         private string status = String.Empty;
         private SqlDataReader dr;
         private SqlConnection con = new SqlConnection();
-
+        DBContext db = new DBContext();
         public List<Actor> GetActors()
         {
             List<Actor> list = new List<Actor>();
             try
             {
-                con.ConnectionString = DBContext.ConnectionString();
+                con.ConnectionString = db.ConnectionString();
                 con.Open();
                 cmd.Connection = con;
                 string sql = "SELECT * FROM Actor";

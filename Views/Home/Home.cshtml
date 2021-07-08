@@ -1,376 +1,116 @@
-﻿
+﻿@model  Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child.MBase64;
 @{
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 @*1st update*@
 <div class="big-image-container">
     @*replace big img here*@
-    <div class="content" style=" background: url(../sources/images/bigSlider/1143269.jpg); background-position: center; background-size: cover; ">
+    <div class="content" style=" background: url(data:image/png;base64,@Model.MIMG_BGbyte);
+        background-position: center;
+        background-size: cover;
+">
         <div class="left-content">
-            <h2>Kimetsu no <span>Yaiba</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem.
-                Mauris nunc congue nisi vitae suscipit tellus mauris a.
-                Lectus arcu bibendum at varius vel pharetra vel.
+            <h2>@Model.Title <span></span></h2>
+            <p>
+               @Model.Desc
             </p>
-            <a href="#" class="play-video"><img src="~/sources/icon/video/play.png"/>
+            <a href="#" class="play-video">
+                <img src="~/sources/icon/video/play.png" />
                 <span>Watch Trailer</span>
             </a>
         </div>
-        <div class="right-content slide"></div>
+        <div class="right-content slide" style="background: url(data:image/png;base64,@Model.MIMG64); background-size: cover;">
+        </div>
     </div>
 </div>
 <div class="trailer" id="trailer-video">
     <iframe allowfullscreen src="https://www.youtube.com/embed/VQGCKyvzIM4"></iframe>
-    <img class="close-trailer" src="~/sources/icon/video/close.png"/>
+    <img class="close-trailer" src="~/sources/icon/video/close.png" />
 </div>
 
 @*top 7 random slider*@
 <div class="top3_random">
     <div class="movie_title">
-        <i class='bx bx-movie-play bx-tada' ></i>
+        <i class='bx bx-movie-play bx-tada'></i>
         <span>your movie today</span>
     </div>
     <div class="owl-carousel" id="top3_random_slide">
-        <!--1-->
-        <a class="movie-item">
-            <img src="~/sources/images/slide/slide-demo.jpg" alt="">
-            <div class="movie-item-content">
-                <div class="movie-item-title">
-                    Kimetsu no Yaiba
-                </div>
-                <div class="movie-infos">
-                    <div class="movie-info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
+
+        @{
+            foreach (var item in ViewBag.Movies6)
+            {
+                <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Mid" class="movie-item">
+                    <img src="data:image/png;base64,@item.MIMG64" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            @item.Title
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>@item.Length mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>10+</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="movie-info">
-                        <i class="bx bxs-time"></i>
-                        <span>24 mins</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>HD</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>10+</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <!--2-->
-        <a class="movie-item">
-            <img src="~/sources/images/slide/pokemon_xyz.jpg" alt="">
-            <div class="movie-item-content">
-                <div class="movie-item-title">
-                    Pokemon XYZ
-                </div>
-                <div class="movie-infos">
-                    <div class="movie-info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <div class="movie-info">
-                        <i class="bx bxs-time"></i>
-                        <span>24 mins</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>HD</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>10+</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <!--3-->
-        <a class="movie-item">
-            <img src="~/sources/images/slide/Myriad_Colors_Phantom_World.jpg" alt="">
-            <div class="movie-item-content">
-                <div class="movie-item-title">
-                    Phantom World
-                </div>
-                <div class="movie-infos">
-                    <div class="movie-info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <div class="movie-info">
-                        <i class="bx bxs-time"></i>
-                        <span>24 mins</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>HD</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>10+</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <!--4-->
-        <a class="movie-item">
-            <img src="~/sources/images/slide/naruto.jpg" alt="">
-            <div class="movie-item-content">
-                <div class="movie-item-title">
-                    Naruto
-                </div>
-                <div class="movie-infos">
-                    <div class="movie-info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <div class="movie-info">
-                        <i class="bx bxs-time"></i>
-                        <span>24 mins</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>HD</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>10+</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <!--5-->
-        <a class="movie-item">
-            <img src="~/sources/images/slide/one_piece.jpg" alt="">
-            <div class="movie-item-content">
-                <div class="movie-item-title">
-                    One Piece
-                </div>
-                <div class="movie-infos">
-                    <div class="movie-info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <div class="movie-info">
-                        <i class="bx bxs-time"></i>
-                        <span>24 mins</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>HD</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>13+</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <!--6-->
-        <a class="movie-item">
-            <img src="~/sources/images/slide/pokemon_movie.jpg" alt="">
-            <div class="movie-item-content">
-                <div class="movie-item-title">
-                    Pokemon The Movie
-                </div>
-                <div class="movie-infos">
-                    <div class="movie-info">
-                        <i class="bx bxs-star"></i>
-                        <span>9.5</span>
-                    </div>
-                    <div class="movie-info">
-                        <i class="bx bxs-time"></i>
-                        <span>120 mins</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>HD</span>
-                    </div>
-                    <div class="movie-info">
-                        <span>10+</span>
-                    </div>
-                </div>
-            </div>
-        </a>
+                </a>
+            }
+        }
     </div>
 </div>
+
 
 @*latest update*@
 <div class="section_last">
     <div class="sec_last_container">
         <div class="movie_title">
-            <i class='bx bxs-videos bx-flashing' ></i>
+            <i class='bx bxs-videos bx-flashing'></i>
             <span>Recently update</span>
         </div>
         <div class="movie-slide carousel-nav-center owl-carousel">
-            <!--1-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/slide-demo.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Kimetsu no Yaiba
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
+
+            @{
+                foreach (var item in ViewBag.MoviesLatestUpdate)
+                {
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Mid" class="movie-item">
+                        <img src="data:image/png;base64,@item.MIMG64" alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                @item.Title
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>@item.Length mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>10+</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>10+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--2-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/taitei maou.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Taitei Maou
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>13+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--3-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/genjitsu_shugi.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Genjitsu Shugi Yuusha
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--4-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/irumakun_ss2.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Mairimashita! Iruma-kun SS2
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--5-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/tokyo_revenger.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Tokyo Revengers
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--6-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/shinigami bocchan.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Shinigami Bocchan
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--7-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/eden_zero.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Eden Zero
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
+                }
+            }
+
+
         </div>
-        
+
     </div>
 </div>
 
@@ -378,187 +118,44 @@
 <div class="section_last">
     <div class="sec_last_container">
         <div class="movie_title">
-            <i class='bx bx-aperture bx-spin' ></i>
+            <i class='bx bx-aperture bx-spin'></i>
             <span>Japanese Drama</span>
         </div>
         <div class="movie-slide carousel-nav-center owl-carousel">
-            <!--1-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/gokudolls.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Gokudolls Live Action
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
+
+            @{
+                foreach (var item in ViewBag.MoviesDramaMovies)
+                {
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Mid" class="movie-item">
+                        <img src="data:image/png;base64,@item.MIMG64" alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                @item.Title
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>@item.Length mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>14+</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--2-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/hapi_mari_live.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Hapi Mari
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--3-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/kamen_teacher.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Kamen Teacher
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--4-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/nigeru_wa_haji.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Nigeru wa Haji
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--5-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/nobunaga_concerto.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Nobunaga Concerto
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--6-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/relife_live.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Relife Live Action
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <!--7-->
-            <a href="#" class="movie-item">
-                <img src="~/sources/images/slide/japan_drama/uso_no_senso.jpg" alt="">
-                <div class="movie-item-content">
-                    <div class="movie-item-title">
-                        Uso no Senso
-                    </div>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                            <i class="bx bxs-star"></i>
-                            <span>9.5</span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span>24 mins</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>HD</span>
-                        </div>
-                        <div class="movie-info">
-                            <span>14+</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
+                }
+            }
+
+
         </div>
-        
+
     </div>
 </div>
 
@@ -566,12 +163,13 @@
 <div class="advanced_search">
     <div class="advanced_content">
         <a href="#" class="advanced_title">
-            <span>Advanced Search&nbsp;
-                <i class='bx bx-search-alt bx-tada bx-rotate-90' ></i>
+            <span>
+                Advanced Search&nbsp;
+                <i class='bx bx-search-alt bx-tada bx-rotate-90'></i>
             </span>
         </a>
         <div class="advanced_img">
-            <img src="~/sources/images/advanced/4955664.png" alt=""/>
+            <img src="~/sources/images/advanced/4955664.png" alt="" />
         </div>
     </div>
 </div>
@@ -644,8 +242,10 @@
                             </div>
                         </div>
                         <div class="pricing-box-content">
-                            <p class="box-mod"><i class='bx bx-message-rounded-detail bx-tada bx-rotate-90' ></i>&nbsp;
-                                5 Slots<span>/only</span></p>
+                            <p class="box-mod">
+                                <i class='bx bx-message-rounded-detail bx-tada bx-rotate-90'></i>&nbsp;
+                                5 Slots<span>/only</span>
+                            </p>
                             <p>Moderating member</p>
                             <p>Moderating discord</p>
                             <p>All Member Options</p>
