@@ -38,5 +38,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
         {
             return View();
         }
+
+
+        [Route("/details", Name = "details")]
+        public IActionResult Details()
+        {
+            return View();
+        }
+
     }
 }
