@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Uta95s_Movie_Web___BETA_0._1.Models.Database;
-using Uta95s_Movie_Web___BETA_0._1.Models.Entity;
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent;
 
 namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
 {
@@ -15,7 +15,6 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
         private DataSet ds = new DataSet();
         private SqlDataAdapter da = new SqlDataAdapter();
         private string status = String.Empty;
-        private DBContext db = new DBContext();
         private SqlDataReader dr;
         private SqlConnection con = new SqlConnection();
 
@@ -24,7 +23,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             List<Actor> list = new List<Actor>();
             try
             {
-                con.ConnectionString = db.GetConnection();
+                con.ConnectionString = DBContext.ConnectionString();
                 con.Open();
                 cmd.Connection = con;
                 string sql = "SELECT * FROM Actor";
@@ -34,7 +33,6 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 {
                     list.Add(new Actor()
                     {
-                        ActorID = dr.GetInt32(0),
                         ActorName = dr.GetString(1),
                         ActorWiki = dr.GetString(2)
                     });
