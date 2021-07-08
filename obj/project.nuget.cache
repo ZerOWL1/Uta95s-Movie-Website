@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NOiwse1TBUX2NNoCaahKv2eQ/WjdJkHdzfp7s74CWs/Uih1WNpwxrmg5+03aUbcGtzFe7XCDAdgiUxD3aMeDfw==",
+  "dgSpecHash": "1l6X8SmAoibDbP4D6gaDBAD4obkrGWspNIiZmALxY/Gsf/VOmySvLKgNw5gv0/E9pLuKU4o5rOoRBflfnHR2YA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s Movie Web - BETA 0.1\\Uta95s Movie Web - BETA 0.1.csproj",
+  "projectFilePath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryuu\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ryuu\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

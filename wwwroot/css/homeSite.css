@@ -736,9 +736,7 @@ cate-mobile-header:hover {
     justify-content: flex-start;
     height: 75vh;
     padding: 0 50px 0 0;
-    background: url(../sources/images/bigSlider/1143269.jpg);
-    background-position: center;
-    background-size: cover;
+    
 }
 
     .content .left-content {

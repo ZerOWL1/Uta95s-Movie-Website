@@ -68,6 +68,9 @@ namespace Uta95s_Movie_Web___BETA_0._1
                 endpoints.MapControllerRoute(
                     name: "/code",
                     pattern: "{controller=Home}/{action=RandomCode}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "/details",
+                    pattern: "{controller=Home}/{action=Details}/{id?}");
             });
         }
     }
