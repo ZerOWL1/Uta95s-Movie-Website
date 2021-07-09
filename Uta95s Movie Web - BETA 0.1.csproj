@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\sources\logo\**" />
+    <Content Remove="wwwroot\sources\logo\**" />
+    <EmbeddedResource Remove="wwwroot\sources\logo\**" />
+    <None Remove="wwwroot\sources\logo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
@@ -13,10 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\3. DAL Database\DAL Database\DAL Database.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\sources\logo\" />
   </ItemGroup>
 
 </Project>

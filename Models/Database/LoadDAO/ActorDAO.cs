@@ -18,33 +18,5 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
         private SqlDataReader dr;
         private SqlConnection con = new SqlConnection();
 
-        public List<Actor> GetActors()
-        {
-            List<Actor> list = new List<Actor>();
-            try
-            {
-                con.ConnectionString = DBContext.ConnectionString();
-                con.Open();
-                cmd.Connection = con;
-                string sql = "SELECT * FROM Actor";
-                cmd.CommandText = sql;
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    list.Add(new Actor()
-                    {
-                        ActorName = dr.GetString(1),
-                        ActorWiki = dr.GetString(2)
-                    });
-                }
-                cmd.Clone();
-            }
-            catch (Exception e)
-            {
-                status = "Error while at GetActors Func " + e.Message;
-                throw;
-            }
-            return list;
-        }
     }
 }

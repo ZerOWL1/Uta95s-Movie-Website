@@ -56,9 +56,15 @@
 <!--gg api-->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="~/js/home.js" type="text/javascript"></script>
+<!--fb-comment-->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=277860507449555&autoLogAppEvents=1" nonce="5evdRipI"></script>
+
 
 
 <script type="text/javascript">
+    $(".like-btn").click(function() {
+        $(".rate-submit").trigger("click");
+    });
 </script>
 </body>
 </html>
