@@ -10,7 +10,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child
     {
         private string mIMG64;
 
-        public MBase64(string title, string desc, int totalEsp, string nation, string language, string release, string trailer, int length, int view, DateTime date, string mImg64) : base(title, desc, totalEsp, nation, language, release, trailer, length, view, date)
+        public MBase64(int mId, string title, string desc, int totalEsp, string nation, string language, string release, string trailer, int length, int view, DateTime date, string mImg64) : base(mId, title, desc, totalEsp, nation, language, release, trailer, length, view, date)
         {
             mIMG64 = mImg64;
         }
