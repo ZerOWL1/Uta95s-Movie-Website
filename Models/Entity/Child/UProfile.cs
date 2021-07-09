@@ -10,7 +10,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child
     {
         private byte[] uIMG;
 
-        public UProfile(string name, string email, string pass, int role, byte[] uImg) : base(name, email, pass, role)
+        public UProfile(string uId, string name, string email, string pass, int role, byte[] uImg) : base(uId, name, email, pass, role)
         {
             uIMG = uImg;
         }
@@ -19,6 +19,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child
         {
             uIMG = uImg;
         }
+
 
         public UProfile()
         {

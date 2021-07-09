@@ -10,7 +10,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child
     {
         private byte[] mIMGByte;
 
-        public MBinary(string title, string desc, int totalEsp, string nation, string language, string release, string trailer, int length, int view, DateTime date, byte[] mImgByte) : base(title, desc, totalEsp, nation, language, release, trailer, length, view, date)
+        public MBinary(int mId, string title, string desc, int totalEsp, string nation, string language, string release, string trailer, int length, int view, DateTime date, byte[] mImgByte) : base(mId, title, desc, totalEsp, nation, language, release, trailer, length, view, date)
         {
             mIMGByte = mImgByte;
         }
@@ -19,6 +19,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child
         {
             mIMGByte = mImgByte;
         }
+
 
         public MBinary(){}
 
