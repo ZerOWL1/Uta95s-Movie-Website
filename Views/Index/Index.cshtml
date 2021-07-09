@@ -99,14 +99,14 @@
             <div class="swiper-wrapper ">
                 <!-- for each here top 10 update here -->
                 
-                @{
-                    foreach (var item in ViewBag.Base64Image)
+                @*@{
+                    foreach (var item in ViewBag.Here)
                     {
                         <div class="swiper-slide">
                             <a><img src="data:image/png;base64,@item" alt=""/></a>
                         </div>
                     }
-                }
+                }*@
                 
                 <div class="swiper-slide">
                     <a><img src="sources/images/Katana Zero.png" alt=""/></a>
@@ -134,20 +134,47 @@
                     <h2>Our Collection</h2>
                     <div class="sec4-boxes">
                         <!--for each 6 box here-->
+                        <div class="box">
+                            <h6>Asperiose</h6>
+                            <div class="img">
+                                <img src="sources/images/Katana Zero.png" alt=""/>
+                            </div>
+                        </div>
 
-                        @{
-                            foreach (var item in ViewBag.Base64Image2)
-                            {
-                                 <div class="box">
-                                    <h6>Asperiose</h6>
-                                         <div class="img">
-                                            <img src="data:image/png;base64,@item" alt="" />
-                                         </div>
-                                 </div>
-                            }
-                        }
+                        <div class="box">
+                            <h6>Asperiose</h6>
+                            <div class="img">
+                                <img src="sources/images/Katana Zero.png" alt=""/>
+                            </div>
+                        </div>
 
-                        
+                        <div class="box">
+                            <h6>Asperiose</h6>
+                            <div class="img">
+                                <img src="sources/images/Katana Zero.png" alt=""/>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Asperiose</h6>
+                            <div class="img">
+                                <img src="sources/images/Katana Zero.png" alt=""/>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Asperiose</h6>
+                            <div class="img">
+                                <img src="sources/images/Katana Zero.png" alt=""/>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h6>Asperiose</h6>
+                            <div class="img">
+                                <img src="sources/images/Katana Zero.png" alt=""/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

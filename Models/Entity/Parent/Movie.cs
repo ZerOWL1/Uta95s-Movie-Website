@@ -7,15 +7,9 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent
 {
     public class Movie
     {
-        
-
-        public Movie()
+        public Movie(int mId, string title, string desc, int totalEsp, string nation, string language, string release, string trailer, int length, int view, DateTime date)
         {
-        }
-
-        public Movie(int mid, string title, string desc, int totalEsp, string nation, string language, string release, string trailer, int length, int view, DateTime date)
-        {
-            this.mid = mid;
+            mID = mId;
             this.title = title;
             this.desc = desc;
             this.totalEsp = totalEsp;
@@ -28,7 +22,9 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent
             this.date = date;
         }
 
-        private int mid;
+        public Movie(){}
+
+        private int mID;
         private string title;
         private string desc;
         private int totalEsp;
@@ -40,7 +36,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent
         private int view;
         private DateTime date;
 
-        public int Mid { get => mid; set => mid = value; }
+        public int MID { get => mID; set => mID = value; }
         public string Title { get => title; set => title = value; }
         public string Desc { get => desc; set => desc = value; }
         public int TotalEsp { get => totalEsp; set => totalEsp = value; }

@@ -6901,8 +6901,8 @@
     },
     "DAL Database/1.0.0": {
       "type": "project",
-      "path": "../../DAL Database/DAL Database.csproj",
-      "msbuildProject": "../../DAL Database/DAL Database.csproj"
+      "path": "../3. DAL Database/DAL Database/DAL Database.csproj",
+      "msbuildProject": "../3. DAL Database/DAL Database/DAL Database.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6914,19 +6914,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Phuong Nguyen\\.nuget\\packages\\": {}
+    "C:\\Users\\Ryuu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phuong Nguyen\\Desktop\\New folder\\New folder\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
+      "projectUniqueName": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
       "projectName": "Uta95s Movie Web - BETA 0.1",
-      "projectPath": "C:\\Users\\Phuong Nguyen\\Desktop\\New folder\\New folder\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
-      "packagesPath": "C:\\Users\\Phuong Nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Phuong Nguyen\\Desktop\\New folder\\New folder\\Uta95s-Movie-Website\\obj\\",
+      "projectPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
+      "packagesPath": "C:\\Users\\Ryuu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Phuong Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ryuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6938,10 +6938,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Phuong Nguyen\\Desktop\\New folder\\DAL Database\\DAL Database.csproj": {
-              "projectPath": "C:\\Users\\Phuong Nguyen\\Desktop\\New folder\\DAL Database\\DAL Database.csproj"
+            "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\3. DAL Database\\DAL Database\\DAL Database.csproj": {
+              "projectPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\3. DAL Database\\DAL Database\\DAL Database.csproj"
             }
           }
         }
@@ -6954,7 +6953,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -6987,7 +6985,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

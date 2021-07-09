@@ -23,7 +23,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database
         } 
 
         //connect return connect string using for data reader
-        public string ConnectionString()
+        public static string ConnectionString()
         {
             DBConnection dbCon = new DBConnection();
             var conStr = dbCon.GetConnectionString();
