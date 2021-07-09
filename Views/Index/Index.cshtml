@@ -1,0 +1,156 @@
+﻿
+@{
+    Layout = "_IndexLayout";
+}
+
+<div class="section" id="section">
+    <img id="star" src="sources/trans/star.png" alt="star"/>
+    <img id="halfmoon" src="sources/trans/halfmoon.png" alt="halfmoon"/>
+    <img id="cloud" src="sources/trans/cloud.png" alt="cloud"/>
+    <img id="grass2" src="sources/trans/grass2.png" alt="grass2"/>
+    <img id="tree" src="sources/trans/tree.png" alt="tree"/>
+    <img id="grass1" src="sources/trans/grass.png" alt="grass1"/>
+    <img id="screen" src="sources/gif/KiminoNa.gif" alt="screen"/>
+    <img id="people" src="sources/trans/people.png" alt="people"/>
+    <img id="grass3" src="sources/trans/grass3.png" alt="grass3"/>
+</div>
+<div class="sec-control">
+    <div class="sec" id="aboutU">
+        <section class="brand-logo">
+            <div class="container sec-container">
+                <div class="brand-logo-inner" data-aos="fade-up">
+                    <div class="item"><img src="sources/images/Naruto-Form.png" alt=""/></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sec1">
+            <div class="container">
+                <div class="sec1-inner">
+                    <div class="text text-left" data-aos="zoom-out-right">
+                        <h3>
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        </h3>
+                    </div>
+                    
+                    <div class="text text-right" data-aos="zoom-out-left">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ac placerat vestibulum lectus mauris ultrices. 
+                            Egestas quis ipsum suspendisse ultrices gravida.
+                            Quam id leo in vitae turpis massa. Nec feugiat nisl pretium fusce id velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sec2 left-right-sec">
+            <div class="container">
+                <div class="sec2-inner">
+                    <div class="text" data-aos="zoom-out-right">
+                        <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+                        <div class="text-inner">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ac placerat vestibulum lectus mauris ultrices.
+                                Egestas quis ipsum suspendisse ultrices gravida.
+                                Quam id leo in vitae turpis massa. Nec feugiat nisl pretium fusce id velit.
+                            </p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="img" data-aos="zoom-out-left">
+                        <img src="sources/gif/right.gif" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec2 left-right-sec">
+            <div class="container">
+                <div class="sec2-inner">
+                    <div class="img" data-aos="zoom-out-up">
+                        <img src="sources/gif/left.gif" alt=""/>
+                    </div>
+                    <div class="text" data-aos="zoom-out-left">
+                        <h2 class="down-title">Lorem ipsum dolor sit amet, consectetur</h2>
+                        <div class="text-inner">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ac placerat vestibulum lectus mauris ultrices.
+                                Egestas quis ipsum suspendisse ultrices gravida.
+                                Quam id leo in vitae turpis massa. Nec feugiat nisl pretium fusce id velit.
+                            </p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="swipper-article py-5 " >
+        <div class="title-swipper">
+            <a href="#" class="latestU">Top&nbspUpdate</a>
+        </div>
+        <div class="swiper-container pd-5" data-aos="zoom-out-left">
+            <div class="swiper-wrapper ">
+                <!-- for each here top 10 update here -->
+                
+                @{
+                    foreach (var item in ViewBag.Base64Image)
+                    {
+                        <div class="swiper-slide">
+                            <a><img src="data:image/png;base64,@item" alt=""/></a>
+                        </div>
+                    }
+                }
+                
+                <div class="swiper-slide">
+                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
+                </div>  
+                <div class="swiper-slide">
+                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
+                </div>
+            </div>
+            <!-- Add Pagination Here -->
+            <!-- <div class="swiper-pagination"></div>-->
+            <div class="swiper-button-next button"></div>
+            <div class="swiper-button-prev button"></div>
+        </div>
+    </div>
+   
+    <section class="sec4">
+            <div class="sec4-container">
+                <div class="sec4-inner" data-aos="zoom-out-right">
+                    <h2>Our Collection</h2>
+                    <div class="sec4-boxes">
+                        <!--for each 6 box here-->
+
+                        @{
+                            foreach (var item in ViewBag.Base64Image2)
+                            {
+                                 <div class="box">
+                                    <h6>Asperiose</h6>
+                                         <div class="img">
+                                            <img src="data:image/png;base64,@item" alt="" />
+                                         </div>
+                                 </div>
+                            }
+                        }
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

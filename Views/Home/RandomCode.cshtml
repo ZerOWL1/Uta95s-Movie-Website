@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "RandomCode";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="left">
+    <div class="lateCD">
+        <div class="lateCD-title">
+            <div class="cd-container">
+                <p class="altitle">Verification&nbsp;Code</p>
+            </div>
+        </div>
+        <div class="contact-container">
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="title">Hi there! Please enter code we sent you.</h3>
+                    <p class="text">
+                        We already send mail to you!! Please enter code or check your mail again!!
+                    </p>
+                    <div class="contact-icon">
+                        <img src="~/sources/images/gif/mail_icon.gif" alt=""/>
+                    </div>
+                    <div class="social-media">
+                        <p>Connect with us :</p>
+                        <div class="social-icons">
+                            <div class="socials-item">
+                                <a title="mailto" href="mailto:uta95s.verify@gmail.com" target="_blank">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                            <div class="socials-item">
+                                <a title="fb-contact" href="https://www.facebook.com/groups/uta95s">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="socials-item">
+                                <a title="discord-fp" href="https://discord.gg/vbtRkSn">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+                    <form asp-route="code" method="post" enctype="multipart/form-data">
+                        <h3 class="title">Enter Your Code</h3>
+                        <div class="input-container">
+                            <input @*asp-for="randomcode"*@ type="text" name="randomCode" class="input" required="">
+                            <label for="">Random Code</label>
+                            <span>&nbsp;Random Code&nbsp;</span>
+                        </div>
+                        <div class="random-btn">
+                            <input type="submit" value="Send" class="btn">
+                            <a href="#" title="re-send" class="btn">RE-SEND</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>       
+</div>
+
