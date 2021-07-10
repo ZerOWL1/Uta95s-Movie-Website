@@ -1,0 +1,226 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="nav">
+    <!-- Nav PC -->
+    <nav class="nav__pc">
+        <ul class="nav__list">
+            <li class="nav_li nav_img">
+                <img src="~/sources/icon/logo_home2.png" alt="logo"/>
+            </li>
+            <li class="nav_li ">
+                <a asp-route="default" class="nav__link nav_link_home">Preview</a>
+            </li>
+            <li class="nav_li ">
+                <a asp-route="home" class="nav__link">Home</a>
+            </li>
+            <li class="nav_li dropdown">
+                <label for="cateDropdown" class="nav__link">Category</label>
+            </li>
+            <li class="nav_li">
+                <a href="https://www.termsfeed.com/live/e3c51e1f-dd04-4568-ba9d-617bca9d4c5d" 
+                   class="nav__link">FAQ</a>
+            </li>
+            <li class="nav_li">
+                @*change to contact page here*@
+                <a asp-route="mail" class="nav__link">Contact</a>
+            </li>
+            <form action="" class="form-search d-flex" enctype="" method="post">
+                <input class="form-control" 
+                       value=""
+                       type="search" 
+                       placeholder="Search" 
+                       aria-label="Search"
+                       name="txt">
+                <button class="btn btn-outline-info" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </ul>
+        <ul class="nav__list_right">
+            <div class="list_right_header nav_item">
+                <a class="nav_a a1"><i class="fas fa-globe-asia"></i></a>
+            </div>
+            <label class="list_right_body nav_item" for="accDropdown">
+                <a class="nav_a a2"><i class="fas fa-user-cog"></i> 
+                    <span>Databaser</span>
+                </a>
+            </label>
+            <div class="list_right_footer nav_item">
+                <a href="#">Music Web</a>
+            </div>
+        </ul>
+    </nav>
+        
+    <div class="block"></div>
+    <!-- hamburger button -->
+    <button class="hamburger hamburger--slider-r" id="button-nav">
+        <label for="nav-mobile-input" class="lbl-hamberger">
+            <div class="hamburger-content">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </div>
+        </label>
+    </button>
+
+    <input type="checkbox" name="" class="nav-input" id="nav-mobile-input" hidden/>
+        
+    <!--overlay-->
+    <label for="nav-mobile-input" class="nav__overlay" id="overlay">
+    </label>
+    <!-- nav_mobile -->
+    <nav class="nav__mobile">
+        <ul class="nav__mobile-list">
+            <li class="nav__mobile_li li1">
+                <a asp-route="default" class="nav__mobile-link">Preview</a>
+            </li><hr class="hr-nav1"/>
+            <li class="nav__mobile_li li4">
+                <a asp-route="home" class="nav__mobile-link">Home</a>
+            </li><hr class="hr-nav4"/>
+            <label for="cateMobile" class="nav__mobile_li li2">
+                <div class="nav__mobile-link">Category</div>
+            </label><hr class="hr-nav2"/>
+            <input type="checkbox" class="checkCateMobile" id="cateMobile" name="" hidden=""/>
+            <li class="nav__mobile_li li3">
+                <a href="https://www.termsfeed.com/live/e3c51e1f-dd04-4568-ba9d-617bca9d4c5d" 
+                   class="nav__mobile-link">FAQ</a>
+            </li><hr class="hr-nav3"/>
+            <li class="nav__mobile_li li5">
+                @*change to contact page here*@
+                <a asp-route="mail" class="nav__mobile-link">Contact</a>
+            </li><hr class="hr-nav5"/>
+        </ul>
+        <div class="icon-bar">
+            <div class="icon-bar-header"></div>
+            <div class="icon-bar-body">
+                <label class="bar icon1" for="nav-account-options">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Databaser</span>
+                </label>
+                <div class="bar icon2"><i class="fas fa-globe-asia"></i></div>
+            </div>
+            <input type="checkbox" class="nav_mobile_account" name id="nav-account-options" hidden=""/>
+            <div class="account-bar">
+                <ul class="account_ul">
+                    <li class="account_li return_li">
+                        <label for="nav-account-options">
+                            <i class="fas fa-chevron-left"></i>
+                            <div class="account-name">Databaser</div>
+                        </label>
+                    </li><hr class="mobile_hr"/>
+                    <li class="account_li">
+                        @*to profile page*@
+                        <a href="#" class="mobile_options">
+                            Account
+                        </a>
+                    </li><hr class="mobile_hr"/>
+                    <li class="account_li">
+                        @*to favorite page*@
+                        <a href="#" class="mobile_options">
+                            Favorite
+                        </a>
+                    </li><hr class="mobile_hr"/>
+                    <li class="account_li">
+                        @*to manage page*@
+                        <a href="#" class="mobile_options">
+                            Management
+                        </a>
+                    </li><hr class="mobile_hr"/>
+                    <li class="account_li">
+                        <a href="#" class="mobile_options">
+                            Sign out
+                        </a>
+                    </li><hr class="mobile_hr"/>
+                </ul>
+            </div>
+            <div class="cate-mobile-bar" id="cate-Mobile">
+                <label for="cateMobile" class="cate-mobile-header">
+                    <i class="fas fa-chevron-left"></i>
+                    <div class="cate-mobile-title">Categories</div>
+                </label>
+                <div class="row g-1 cate-mobile-container">
+                    @*foreach here*@
+                    <a class="col-3 cate-mobile-item">
+                        <div class="p-2 item-mobile-value">Drama</div>
+                    </a>
+                    <a class="col-3 cate-mobile-item">
+                        <div class="p-2 item-mobile-value">Action</div>
+                    </a>
+                    <a class="col-3 cate-mobile-item">
+                        <div class="p-2 item-mobile-value">Shounen</div>
+                    </a>
+                    <a class="col-3 cate-mobile-item">
+                        <div class="p-2 item-mobile-value">Shoujo</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="icon-bar-footer">
+                <form action="" class="d-flex nav_mobile_search" method="post">
+                    <button class="btn btn-outline-info" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input class="form-control"
+                           value=""
+                           type="search"
+                           placeholder="Search"
+                           aria-label="Search"
+                           name="txt">
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+
+@*category_pc_dropdown*@
+<input id="cateDropdown" type="checkbox" name="" hidden=""/>
+<ul class="cateDrop_pc" aria-labelledby="cateDropdown">
+    @*for each here*@
+    <div class="row g-1 row-cate">
+        <a class="col-2 cate-item">
+            <div class="p-2 item-value">Drama</div>
+        </a>
+        <a class="col-2 cate-item">
+            <div class="p-2 item-value">Action</div>
+        </a>
+        <a class="col-2 cate-item">
+            <div class="p-2 item-value">Shounen</div>
+        </a>
+        <a class="col-2 cate-item">
+            <div class="p-2 item-value">Shoujo</div>
+        </a>
+        <a class="col-2 cate-item">
+            <div class="p-2 item-value">Adventure</div>
+        </a>
+        <a class="col-2 cate-item">
+            <div class="p-2 item-value">Isekai</div>
+        </a>
+        <a class="col-2 cate-mobile-item">
+            <div class="p-2 item-mobile-value">Demo</div>
+        </a>
+    </div>
+</ul>
+
+@*account_pc_dropdown*@
+<input id="accDropdown" type="checkbox" name="" hidden=""/>
+<ul class="accDrop_pc drop_pc_account" aria-labelledby="accDropdown">
+    @*for each here*@
+    <div class="row g-1">
+        <a href="#" class="col-3 cate-item">
+            <div class="p-2 item-value">Profile</div>
+        </a>
+        <a href="#" class="col-3 cate-item">
+            <div class="p-2 item-value">Favorite</div>
+        </a>
+        <a href="#" class="col-3 cate-item">
+            <div class="p-2 item-value">Management</div>
+        </a>
+        <a asp-controller="Index" asp-action="Index"class="col-3 cate-item">
+            <div class="p-2 item-value">Log out</div>
+        </a>
+    </div>
+</ul>
