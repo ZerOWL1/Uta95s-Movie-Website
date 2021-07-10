@@ -17,6 +17,5 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
         private string status = String.Empty;
         private SqlDataReader dr;
         private SqlConnection con = new SqlConnection();
-
     }
 }

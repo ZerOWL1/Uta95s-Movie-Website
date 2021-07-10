@@ -137,9 +137,30 @@ $(document).ready(function () {
         }
     });
 
+    /*movie-player*/
+    $('.movie-player-slide').owlCarousel({
+        items: 2,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        nav: true,
+        navText: navText,
+        margin: 10,
+        responsive: {
+            500: {
+                items: 2
+            },
+            1280: {
+                items: 4
+            },
+            1600: {
+                items: 6
+            }
+        }
+    });
+
 
     //contact form
-    //contact
     const inputs = document.querySelectorAll(".input");
 
     function focusFunc() {
