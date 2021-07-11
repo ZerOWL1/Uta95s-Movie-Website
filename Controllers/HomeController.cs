@@ -26,7 +26,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
         }
 
         [Route("/home", Name = "home")]
-        public IActionResult Home()
+        public  IActionResult Home()
         {
             try
             {
@@ -42,15 +42,15 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
 
                 ArrayList listGenre = GenreControl.Genre();
                 ViewBag.Genre = listGenre;
+                
+               MBase64 m64 = movieControl.GetRandom1Movie();
+               return View(m64);
 
-                MBase64 m64 = movieControl.GetTop1();
-                ViewBag.m64 = m64;
             }
             catch (Exception e)
             {
-                return RedirectToPage("Home.cshtml");
+                return RedirectToRoute("");
             }
-            return View();
         }
 
         [Route("/mail", Name = "mail")]
@@ -74,6 +74,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
 
         [Route("/films", Name = "films")]
         public IActionResult Movies()
+        {
+            return View();
+        }
+
+
+        [Route("/profiles", Name = "profile")]
+        public IActionResult Profile()
         {
             return View();
         }

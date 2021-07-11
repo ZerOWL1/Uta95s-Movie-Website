@@ -54,7 +54,7 @@ body {
     padding-bottom: 20px;
 }
 
-.nav {
+.nav-bar {
     top: 0;
     position: fixed;
     width: 100%;
@@ -86,7 +86,7 @@ h1 {
     line-height: 2rem;
 }
 
-.nav .hamburger-content {
+.nav-bar .hamburger-content {
     padding-right: 10px;
     display: inherit;
 }
@@ -105,7 +105,7 @@ h1 {
     background: rgba(0, 0, 0, 0.3);
 }
 /* button */
-.nav #button-nav {
+.nav-bar #button-nav {
     /*background: #0078F2;*/
     height: 100%;
     display: none;
@@ -121,12 +121,12 @@ h1 {
 
 
 @media(max-width: 900px) {
-    .nav #button-nav {
+    .nav-bar #button-nav {
         display: inline;
         padding: 0;
     }
 
-    .nav .hamburger-content .hamburger-box {
+    .nav-bar .hamburger-content .hamburger-box {
         padding: 0;
         display: block;
         margin-top: 1px;
@@ -733,6 +733,7 @@ cate-mobile-header:hover {
 }
 
 .content {
+    position: relative;
     font-family: nova, sans-serif;
     display: flex;
     align-items: center;
@@ -742,6 +743,7 @@ cate-mobile-header:hover {
 }
 
     .content .left-content {
+        position: absolute;
         border-top: 1px #000000;
         border-left: 1px;
         background: linear-gradient( -240deg, rgba(0,0,0,1) 64%, rgba(0,0,0,0) 70%);
@@ -751,6 +753,7 @@ cate-mobile-header:hover {
     }
 
         .content .left-content h2 {
+            width: 90%;
             text-transform: uppercase;
             font-weight: 400;
             font-size: 2.5em;
@@ -957,7 +960,9 @@ cate-mobile-header:hover {
         background: linear-gradient( -244deg, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 80%);
         padding-top: 12%;
     }
-
+    .content .left-content h2 {
+        font-size: 2em;
+    }
         .content .left-content p {
             width: 70%;
         }
@@ -973,6 +978,10 @@ cate-mobile-header:hover {
 }
 
 @media(max-width: 730px) {
+    .left-content{
+        padding-top: 5%;
+        width: 100%;
+    }
     .content {
         height: 110vh;
     }
@@ -1026,11 +1035,11 @@ cate-mobile-header:hover {
 
 @media(max-width: 640px) {
     .content .left-content {
-        padding-top: 20%;
+        padding-top: 10%;
     }
 
         .content .left-content h2 {
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
 
         .content .left-content p {
@@ -1924,6 +1933,10 @@ footer a.logo:hover {
 }
 
 @media(max-width: 850px) {
+    .footer-menu img {
+        width: 100%;
+    }
+
     .lateCD .contact-container .form {
         grid-template-columns: 1fr;
     }
@@ -2457,23 +2470,80 @@ footer a.logo:hover {
         width: 100%;
     }
 
-    @media(max-width: 850px) {
-        .films-container {
-            display: block;
-        }
-        .films-right {
-            float: none;
-            width: 100%
-        }
-        .films-left {
-            float: none;
-            width: 100%
-        }
+@media(max-width: 850px) {
+    .films-container {
+        display: block;
     }
 
-    @media(max-width: 400px){
-        .pricing-box-header {
-            display: block;
-            text-align: center;
-        }
+    .films-right {
+        float: none;
+        width: 100%
     }
+
+    .films-left {
+        float: none;
+        width: 100%
+    }
+}
+
+@media(max-width: 400px) {
+    .pricing-box-header {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/* Profile */
+.profile-container {
+    position: relative;
+    width: 100%;
+    background: #F8F8F8;
+    font-family: var(--font-open);
+    overflow: hidden;
+    display: flex;
+    padding: 70px 90px;
+    color: #999999;
+}
+
+.tab-header {
+    width: 250px;
+}
+
+.tab-content {
+    padding: 50px;
+    border: 1px solid #EBEBEB;
+    background: #fff;
+    width: 100%;
+    color: #000;
+    margin-left: 15px;
+}
+
+.tab-header-items {
+    position: relative;
+    cursor: pointer;
+    border: .5px solid #EBEBEB;
+    width: 100%;
+    height: calc(200px / 4);
+    background: #fff;
+    text-indent: 20px;
+    color: #999999;
+    font-weight: 600;
+    font-size: .8rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+    .tab-header-items:hover {
+        border-left: 5px solid #0AAFF1;
+    }
+
+.tab-header .active {
+    border-left: 5px solid #0AAFF1;
+}
+
+.nav-link{
+    background: #fff;
+    border-radius: 0;
+}

@@ -26,8 +26,15 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8e39bf7f7bd509a4183c8b137bb970eceeab0680", @"/Views/Shared/IndexLayout/indexHeader.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f9402992eb539c0ba87eefcf16d516dee36f648", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fcc158b0418af7631f29c114f762af96e665765", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_IndexLayout_indexHeader : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-route", "home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -132,7 +139,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 <!-- form login -->
 ");
             WriteLiteral("                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e39bf7f7bd509a4183c8b137bb970eceeab06809489", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e39bf7f7bd509a4183c8b137bb970eceeab06809720", async() => {
                 WriteLiteral("\r\n                    <div class=\"wrong-login alert-danger\">\r\n                    </div>\r\n                    <div class=\"field field-input\">\r\n                        <input ");
                 WriteLiteral(" name=\"email\" type=\"email\" placeholder=\"Email\" required/>\r\n                    </div>\r\n                    <div class=\"field field-input\">\r\n                        <input ");
                 WriteLiteral(@" name=""pass"" id=""passwords"" type=""password"" placeholder=""Passwords"" required/>
@@ -159,7 +166,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 BeginWriteAttribute("class", " class=\"", 4422, "\"", 4430, 0);
                 EndWriteAttribute();
                 WriteLiteral(">Signup Now</a>\r\n                    </div>\r\n                   <div class=\"guess-link\">\r\n                       <span>Join with guest account</span>&nbsp\r\n                       ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e39bf7f7bd509a4183c8b137bb970eceeab068011909", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e39bf7f7bd509a4183c8b137bb970eceeab068012140", async() => {
                     WriteLiteral("GUEST NOW!");
                 }
                 );
@@ -198,7 +205,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n                <!-- form sign up -->\r\n");
             WriteLiteral("                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e39bf7f7bd509a4183c8b137bb970eceeab068014981", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e39bf7f7bd509a4183c8b137bb970eceeab068015212", async() => {
                 WriteLiteral("\r\n");
                 WriteLiteral("                    <div class=\"field field-input\">\r\n                        <input ");
                 WriteLiteral(" name=\"emailSign\" type=\"email\" placeholder=\"Email\" required/>\r\n                    </div>\r\n                    <div class=\"field field-input\">\r\n                        <input ");

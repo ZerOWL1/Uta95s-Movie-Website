@@ -45,9 +45,9 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
                     int length = int.Parse(mvTable.Rows[count]["Lenght"].ToString());
                     int view = int.Parse(mvTable.Rows[count]["View"].ToString());
                     DateTime date = DateTime.Parse(mvTable.Rows[count]["DateADD"].ToString());
-
-                    MBase64 m = new MBase64(id, title, des, totalEsp, national, language, release, trailer, length, view,
-                        date, base64img, base64BGIMG);
+                    string mStatus = mvTable.Rows[count]["saName"].ToString();
+                    MStatus m = new MStatus(id, title, des, totalEsp, national, language, release, trailer, length, view,
+                        date, base64img, base64BGIMG, mStatus);
 
                     listMoviesRandom6.Add(m);
                     count++;
@@ -92,11 +92,11 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
                     int length = int.Parse(mvTable.Rows[count]["Lenght"].ToString());
                     int view = int.Parse(mvTable.Rows[count]["View"].ToString());
                     DateTime date = DateTime.Parse(mvTable.Rows[count]["DateADD"].ToString());
+                    string statusMovie = mvTable.Rows[count]["SaName"].ToString();
 
-                    MBase64 m = new MBase64(id, title, des, totalEsp, national, language, release,
-                        trailer, length, view, date, base64img, base64BGimg);
-                    listMoviesLatestUpdate.Add(m);
 
+                    MStatus mStatus = new MStatus(id, title, des, totalEsp, national, language, release, trailer, length, view, date, base64img, base64BGimg, statusMovie);
+                    listMoviesLatestUpdate.Add(mStatus);
                     count++;
                 }
             }
@@ -137,9 +137,9 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
                     int length = int.Parse(mvTable.Rows[count]["Lenght"].ToString());
                     int view = int.Parse(mvTable.Rows[count]["View"].ToString());
                     DateTime date = DateTime.Parse(mvTable.Rows[count]["DateADD"].ToString());
-
-                    MBase64 m = new MBase64(id, title, des, totalEsp, national, language, release,
-                        trailer, length, view, date, base64img, base64BGimg);
+                    string mStatus = mvTable.Rows[count]["SaName"].ToString();
+                    MStatus m = new MStatus(id, title, des, totalEsp, national, language, release,
+                        trailer, length, view, date, base64img, base64BGimg, mStatus);
                     listDramaMovies.Add(m);
 
                     count++;
@@ -150,16 +150,15 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
                 status = "Error at function DramaMovies " + e.Message;
             }
             return listDramaMovies;
-
         }
 
         //Get Top1 to BigIMG
-        public MBase64 GetTop1()
+        public MBase64 GetRandom1Movie()
         {
             try
             {
                 MBase64 m = new MBase64();
-                DataTable GetTop1 = mDAO.GetTop1();
+                DataTable GetTop1 = mDAO.GetRandomTop1();
                 int count = 0;
 
                 int id = int.Parse(GetTop1.Rows[count]["MID"].ToString());
@@ -193,5 +192,56 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
                 return null;
             }
         }
+
+
+        //index page
+        public ArrayList IndexSliderImages()
+        {
+            ArrayList listImg = new ArrayList();
+            try
+            {
+                DataTable mvTable = mDAO.GetALLMovies();
+
+                int count = 0;
+
+                foreach (var item in mvTable.Rows)
+                {
+                    byte[] bytesImg = (byte[]) mvTable.Rows[count]["Movie_IMG"];
+                    string base64img = Convert.ToBase64String(bytesImg, 0, bytesImg.Length);
+                    listImg.Add(base64img);
+                    count++;
+                }
+            }
+            catch (Exception e)
+            {
+                status = "Error at function IndexSliderImages " + e.Message;
+            }
+            return listImg;
+        }
+
+        public ArrayList IndexSliderRandomImages()
+        {
+            ArrayList listRandom = new ArrayList();
+            try
+            {
+                DataTable mvTable = mDAO.GetRandom6Movies();
+
+                int count = 0;
+
+                foreach (var item in mvTable.Rows)
+                {
+                    byte[] bytesImg = (byte[]) mvTable.Rows[count]["Movie_IMG"];
+                    string base64img = Convert.ToBase64String(bytesImg, 0, bytesImg.Length);
+                    listRandom.Add(base64img);
+                    count++;
+                }
+            }
+            catch (Exception e)
+            {
+                status = "Error at function IndexSliderImages " + e.Message;
+            }
+            return listRandom;
+        }
+
     }
 }

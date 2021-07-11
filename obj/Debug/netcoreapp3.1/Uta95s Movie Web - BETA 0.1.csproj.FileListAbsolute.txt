@@ -278,3 +278,4 @@ C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\ne
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.genruntimeconfig.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Razor\Views\Home\Movies.cshtml.g.cs
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Razor\Views\Home\Profile.cshtml.g.cs

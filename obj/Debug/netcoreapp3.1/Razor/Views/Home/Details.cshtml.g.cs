@@ -26,8 +26,15 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5ff6629a8cbf9b73549edba4d5caa6446a01085c", @"/Views/Home/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f9402992eb539c0ba87eefcf16d516dee36f648", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fcc158b0418af7631f29c114f762af96e665765", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("title", new global::Microsoft.AspNetCore.Html.HtmlString("home"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -75,7 +82,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"detail\">\r\n    <div class=\"detail-header\">\r\n        <div class=\"detail-header-left\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c6274", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c6505", async() => {
                 WriteLiteral("\r\n                <i class=\"fas fa-chevron-left\"></i>\r\n                Back to Home\r\n            ");
             }
             );
@@ -102,10 +109,10 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
             </div>
             <div class=""detail-rate"">
                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c8052", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c8283", async() => {
                 WriteLiteral("\r\n                    <i class=\"far fa-thumbs-up like-btn\"></i>\r\n                    <select ");
                 WriteLiteral(" name=\"rate\" class=\"select-rate\" title=\"rate\">\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c8520", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c8751", async() => {
                     WriteLiteral("&nbsp;default&nbsp;");
                 }
                 );
@@ -120,7 +127,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c9658", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c9889", async() => {
                     WriteLiteral("1⭐");
                 }
                 );
@@ -137,7 +144,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c10988", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c11219", async() => {
                     WriteLiteral("2⭐");
                 }
                 );
@@ -154,7 +161,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c12319", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c12550", async() => {
                     WriteLiteral("3⭐");
                 }
                 );
@@ -171,7 +178,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c13650", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c13881", async() => {
                     WriteLiteral("4⭐");
                 }
                 );
@@ -188,7 +195,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c14981", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c15212", async() => {
                     WriteLiteral("5⭐");
                 }
                 );
@@ -205,7 +212,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c16312", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c16543", async() => {
                     WriteLiteral("6⭐");
                 }
                 );
@@ -222,7 +229,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c17643", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c17874", async() => {
                     WriteLiteral("7⭐");
                 }
                 );
@@ -239,7 +246,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c18974", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c19205", async() => {
                     WriteLiteral("8⭐");
                 }
                 );
@@ -256,7 +263,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c20305", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c20536", async() => {
                     WriteLiteral("9⭐");
                 }
                 );
@@ -273,7 +280,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c21636", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ff6629a8cbf9b73549edba4d5caa6446a01085c21867", async() => {
                     WriteLiteral("10⭐");
                 }
                 );
