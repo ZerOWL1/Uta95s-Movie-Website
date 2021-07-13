@@ -28,7 +28,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
 
         public DataTable Get7MoviesLatest()
         {
-            string sql = "SELECT * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID";
+            string sql = "SELECT TOP 7 * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID";
             return DBContext.GetDataBySQL(sql);
         }
 

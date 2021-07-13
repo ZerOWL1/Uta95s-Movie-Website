@@ -177,5 +177,11 @@ $(document).ready(function () {
         input.addEventListener("focus", focusFunc);
         input.addEventListener("blur", blurFunc);
     });
+
+
+    //profile
+    $(".secu-discard").click(function() {
+        $("input[type='password']").val('');
+    });
 });
 

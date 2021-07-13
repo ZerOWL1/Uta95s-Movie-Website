@@ -1,31 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent
 {
-    public class User
+    public class Mail
     {
-        public User(string name, string email, string pass, int role)
+        public Mail(string name, string pass, string toMail, string reCode)
         {
             this.name = name;
-            this.email = email;
             this.pass = pass;
-            this.role = role;
+            this.toMail = toMail;
+            this.reCode = reCode;
         }
 
-        public User(){}
+        public  Mail(){}
 
         private string name;
-        private string email;
         private string pass;
-        private int role;
+        private string toMail;
+        private string reCode;
 
         public string Name { get => name; set => name = value; }
-        public string Email { get => email; set => email = value; }
         public string Pass { get => pass; set => pass = value; }
-        public int Role { get => role; set => role = value; }
+        public string ToMail { get => toMail; set => toMail = value; }
+        public string ReCode { get => reCode; set => reCode = value; }
     }
 }

@@ -3,6 +3,7 @@
 *@
 @{
 }
+@*@model User;*@
 <header data-aos="fade-up">
     <!-- navbar bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -69,14 +70,13 @@
             <div class="form-inner">
                 <!-- form login -->
                 @*asp-route / asp-controller / asp-action here*@
-                <form asp-route="home" class="login" method="post" enctype="multipart/form-data">
-                    <div class="wrong-login alert-danger">
+                <form asp-route="login" class="login" method="post" enctype="multipart/form-data">
+                    <div class="wrong-login alert-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="field field-input">
+                        <input @*asp-for="Email"*@ name="Email" type="email" placeholder="Email" required/>
                     </div>
                     <div class="field field-input">
-                        <input @*asp-for="email"*@ name="email" type="email" placeholder="Email" required/>
-                    </div>
-                    <div class="field field-input">
-                        <input @*asp-for="passwords"*@ name="pass" id="passwords" type="password" placeholder="Passwords" required/>
+                        <input @*asp-for="Pass"*@ name="Pass" id="passwords" type="password" placeholder="Passwords" required/>
                     </div>
                     <div class="show-pass">
                         <input type="checkbox" onclick="checkPass()">
@@ -105,18 +105,16 @@
 
                 <!-- form sign up -->
                 @*asp-route / asp-controller / asp-action here*@
-                <form asp-controller="Home" asp-action="RandomCode" class="signup" method="post" enctype="multipart/form-data">
-                    @*<div class="wrong-repass">
-                        <p class="wrong-title">${remess}</p>
-                    </div>*@
+                <form asp-route="signup" class="signup" method="post" enctype="multipart/form-data">
+                    <div class="wrong-login alert-danger" asp-validation-summary="ModelOnly"></div>
                     <div class="field field-input">
-                        <input @*asp-for="emailSign"*@ name="emailSign" type="email" placeholder="Email" required/>
+                        <input @*asp-for="Email"*@ name="EmailSign" type="email" placeholder="Email" required/>
                     </div>
                     <div class="field field-input">
-                        <input @*asp-for="passSign"*@ name="pass" type="password" placeholder="Passwords" required/>
+                        <input @*asp-for="Pass"*@ name="PasswordSign" type="password" placeholder="Passwords" required/>
                     </div>
                     <div class="field field-input">
-                        <input @*asp-for="repassSign"*@ name="repass" type="password" placeholder="Confirm passwords" required/>
+                        <input name="RePasswordSign" type="password" placeholder="Confirm passwords" required/>
                     </div>
                     <div class="block-space"></div>
                     <div class="g-recaptcha" data-sitekey="6Lern4AaAAAAAHcDkthqGVzuJ24Qq6_WIGhFSAyn"

@@ -33,8 +33,15 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2255a5f315173806fbc118b45f97812285f9e95", @"/Views/Shared/IndexLayout/indexFooter.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fcc158b0418af7631f29c114f762af96e665765", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe78d075a471bdea6c6bdd8d2ce98332256774dd", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_IndexLayout_indexFooter : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1l6X8SmAoibDbP4D6gaDBAD4obkrGWspNIiZmALxY/Gsf/VOmySvLKgNw5gv0/E9pLuKU4o5rOoRBflfnHR2YA==",
+  "dgSpecHash": "I/d/eoJWicVCWObVafFckbMYLDkHODS+b/17SMkxZUmKJgPCMxDsFB6QSar8XnLpKuzB1K8d3HwzV4EvUyMY9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ryuu\\.nuget\\packages\\bcrypt-official\\0.1.109\\bcrypt-official.0.1.109.nupkg.sha512",
     "C:\\Users\\Ryuu\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ryuu\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Ryuu\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
@@ -131,5 +132,16 @@
     "C:\\Users\\Ryuu\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Ryuu\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt-Official 0.1.109' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt-Official",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

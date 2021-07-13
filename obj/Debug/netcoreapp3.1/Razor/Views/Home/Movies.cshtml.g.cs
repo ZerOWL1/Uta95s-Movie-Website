@@ -33,8 +33,15 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"47a8df40def747241f7f49dcf3118b14474f87f3", @"/Views/Home/Movies.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fcc158b0418af7631f29c114f762af96e665765", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe78d075a471bdea6c6bdd8d2ce98332256774dd", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Movies : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/sources/images/slide/slide-demo.jpg"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -120,7 +127,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                     <!--1-->
                     <a href=""#"" class=""movie-item"">
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f39051", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f39283", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -156,7 +163,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                                 </div>
                       ");
             WriteLiteral("      </div>\r\n                        </div>\r\n                    </a>\r\n                    <!--2-->\r\n                    <a href=\"#\" class=\"movie-item\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f311428", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f311660", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -192,7 +199,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                                 </div>
                            ");
             WriteLiteral(" </div>\r\n                        </div>\r\n                    </a>\r\n                    <!--3-->\r\n                    <a href=\"#\" class=\"movie-item\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f313801", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f314033", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -228,7 +235,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                                 </div>
                  ");
             WriteLiteral("           </div>\r\n                        </div>\r\n                    </a>\r\n                    <!--4-->\r\n                    <a href=\"#\" class=\"movie-item\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f316184", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f316416", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -264,7 +271,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                                 </div>
            ");
             WriteLiteral("                 </div>\r\n                        </div>\r\n                    </a>\r\n                    <!--5-->\r\n                    <a href=\"#\" class=\"movie-item\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f318573", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f318805", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -300,7 +307,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                                 </div>
                        ");
             WriteLiteral("     </div>\r\n                        </div>\r\n                    </a>\r\n                    <!--6-->\r\n                    <a href=\"#\" class=\"movie-item\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f320950", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f321182", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -336,7 +343,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
                                 </div>
                      ");
             WriteLiteral("       </div>\r\n                        </div>\r\n                    </a>\r\n                    <!--7-->\r\n                    <a href=\"#\" class=\"movie-item\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f323329", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f323561", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -396,7 +403,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
     <!--1-->
     <a href=""#"" class=""movie-item films-right-item"">
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f326344", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f326576", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -436,7 +443,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
     <!--2-->
     <a href=""#"" class=""movie-item films-right-item"">
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f328298", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f328530", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -476,7 +483,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
     <!--3-->
     <a href=""#"" class=""movie-item films-right-item"">
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f330261", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f330493", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -516,7 +523,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
     <!--4-->
     <a href=""#"" class=""movie-item films-right-item"">
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f332209", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "47a8df40def747241f7f49dcf3118b14474f87f332441", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

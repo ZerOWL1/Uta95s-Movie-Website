@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,7 +24,10 @@ namespace Uta95s_Movie_Web___BETA_0._1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            services.AddSession();
             services.AddControllersWithViews();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,9 +45,9 @@ namespace Uta95s_Movie_Web___BETA_0._1
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             /*app.UseEndpoints(endpoints =>
@@ -58,6 +62,9 @@ namespace Uta95s_Movie_Web___BETA_0._1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    pattern: "{controller=Index}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "/index",
                     pattern: "{controller=Index}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "/home",
@@ -77,6 +84,18 @@ namespace Uta95s_Movie_Web___BETA_0._1
                 endpoints.MapControllerRoute(
                     name: "/profiles",
                     pattern: "{controller=Home}/{action=Profile}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "/login",
+                    pattern: "{controller=Index}/{action=Login}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "/logout",
+                    pattern: "{controller=Home}/{action=Logout}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "/signup",
+                    pattern: "{controller=Index}/{action=Signup}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "/verifyCode",
+                    pattern: "{controller=Home}/{action=VerifyCode}/{id?}");
             });
         }
     }

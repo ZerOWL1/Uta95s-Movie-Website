@@ -248,8 +248,6 @@ C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\bin\Debug\ne
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csprojAssemblyReference.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.AssemblyInfoInputs.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.AssemblyInfo.cs
-C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csproj.CoreCompileInputs.cache
-C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.RazorAssemblyInfo.cache
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.RazorAssemblyInfo.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.TagHelpers.input.cache
@@ -279,3 +277,6 @@ C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\ne
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Razor\Views\Home\Movies.cshtml.g.cs
 C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Razor\Views\Home\Profile.cshtml.g.cs
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.csproj.CoreCompileInputs.cache
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\obj\Debug\netcoreapp3.1\Uta95s Movie Web - BETA 0.1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\bin\Debug\netcoreapp3.1\BCrypt.Net.dll
