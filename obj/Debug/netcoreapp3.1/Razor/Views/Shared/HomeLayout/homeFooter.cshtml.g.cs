@@ -26,8 +26,22 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"18eebc605984b68019fa48241344c4499dcd1c31", @"/Views/Shared/HomeLayout/homeFooter.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f9402992eb539c0ba87eefcf16d516dee36f648", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d223b6492fbaf1bdb6fc906766e59671a5d21e5d", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_HomeLayout_homeFooter : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-route", "mail", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -80,7 +94,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                         <a href=""https://www.facebook.com/groups/uta95s/"" class=""social-item"">
                             <i class='bx bx");
             WriteLiteral("l-facebook-square\'></i>\r\n                        </a>\r\n                        <a href=\"https://discord.gg/vbtRkSn\" class=\"social-item\">\r\n                            <i class=\'bx bxl-discord\' ></i>\r\n                        </a>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18eebc605984b68019fa48241344c4499dcd1c316472", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18eebc605984b68019fa48241344c4499dcd1c316935", async() => {
                 WriteLiteral("\r\n                            <i class=\'bx bx-mail-send\' ></i>\r\n                        ");
             }
             );
@@ -110,7 +124,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                                 <li><a href=""#"">Music web</a></li>
                                 <li><a href=""#"">Social media</a></li>
                                 <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18eebc605984b68019fa48241344c4499dcd1c318604", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18eebc605984b68019fa48241344c4499dcd1c319067", async() => {
                 WriteLiteral("Contacts");
             }
             );
@@ -147,7 +161,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                                 <li><a href=""https://github.com/ZerOWL1"">About Designer</a></li>
                     ");
             WriteLiteral("            <li><a href=\"https://github.com/ZerOWL1\">About Front-End</a></li>\r\n                                <li><a href=\"#\">About Back-End</a></li>\r\n                                <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18eebc605984b68019fa48241344c4499dcd1c3111030", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18eebc605984b68019fa48241344c4499dcd1c3111493", async() => {
                 WriteLiteral("Contacts");
             }
             );
@@ -172,7 +186,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                             <ul class=""footer-menu"">
                                 <li><a href=""#"">
                                     <p>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "18eebc605984b68019fa48241344c4499dcd1c3112613", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "18eebc605984b68019fa48241344c4499dcd1c3113076", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -187,7 +201,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</p>\r\n                                </a></li>\r\n                                <li><a href=\"#\">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "18eebc605984b68019fa48241344c4499dcd1c3113866", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "18eebc605984b68019fa48241344c4499dcd1c3114329", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -2,6 +2,7 @@
 @{
     Layout = "_IndexLayout";
 }
+@model User;
 
 <div class="section" id="section">
     <img id="star" src="sources/trans/star.png" alt="star"/>
@@ -97,29 +98,14 @@
         </div>
         <div class="swiper-container pd-5" data-aos="zoom-out-left">
             <div class="swiper-wrapper ">
-                <!-- for each here top 10 update here -->
-                
-                @*@{
-                    foreach (var item in ViewBag.Here)
+                @{
+                    foreach (var item in ViewBag.IndexSlider)
                     {
                         <div class="swiper-slide">
-                            <a><img src="data:image/png;base64,@item" alt=""/></a>
+                            <a><img src="data:image/png;base64,@item" alt="slider-item"/></a>
                         </div>
                     }
-                }*@
-                
-                <div class="swiper-slide">
-                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
-                </div>
-                <div class="swiper-slide">
-                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
-                </div>  
-                <div class="swiper-slide">
-                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
-                </div>
-                <div class="swiper-slide">
-                    <a><img src="sources/images/Katana Zero.png" alt=""/></a>
-                </div>
+                }
             </div>
             <!-- Add Pagination Here -->
             <!-- <div class="swiper-pagination"></div>-->
@@ -134,47 +120,14 @@
                     <h2>Our Collection</h2>
                     <div class="sec4-boxes">
                         <!--for each 6 box here-->
-                        <div class="box">
-                            <h6>Asperiose</h6>
-                            <div class="img">
-                                <img src="sources/images/Katana Zero.png" alt=""/>
+                        @foreach (var item in ViewBag.IndexRandomSlider)
+                        {
+                            <div class="box">
+                                <div class="img">
+                                    <img src="data:image/png;base64,@item" alt="random-item"/>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="box">
-                            <h6>Asperiose</h6>
-                            <div class="img">
-                                <img src="sources/images/Katana Zero.png" alt=""/>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <h6>Asperiose</h6>
-                            <div class="img">
-                                <img src="sources/images/Katana Zero.png" alt=""/>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <h6>Asperiose</h6>
-                            <div class="img">
-                                <img src="sources/images/Katana Zero.png" alt=""/>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <h6>Asperiose</h6>
-                            <div class="img">
-                                <img src="sources/images/Katana Zero.png" alt=""/>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <h6>Asperiose</h6>
-                            <div class="img">
-                                <img src="sources/images/Katana Zero.png" alt=""/>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>

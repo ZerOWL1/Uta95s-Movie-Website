@@ -4,7 +4,7 @@
 @{
 }
 
-<div class="nav">
+<div class="nav-bar">
     <!-- Nav PC -->
     <nav class="nav__pc">
         <ul class="nav__list">
@@ -44,11 +44,14 @@
             <div class="list_right_header nav_item">
                 <a class="nav_a a1"><i class="fas fa-globe-asia"></i></a>
             </div>
-            <label class="list_right_body nav_item" for="accDropdown">
-                <a class="nav_a a2"><i class="fas fa-user-cog"></i> 
-                    <span>Databaser</span>
-                </a>
-            </label>
+                <label class="list_right_body nav_item" for="accDropdown">
+                    <a class="nav_a a2"><i class="fas fa-user-cog"></i> 
+                    @if (ViewBag.user != null)
+                    {
+                        <span>@ViewBag.user.Name</span>
+                    }
+                    </a>
+                </label>
             <div class="list_right_footer nav_item">
                 <a href="#">Music Web</a>
             </div>
@@ -97,10 +100,12 @@
         <div class="icon-bar">
             <div class="icon-bar-header"></div>
             <div class="icon-bar-body">
-                <label class="bar icon1" for="nav-account-options">
-                    <i class="fas fa-user-cog"></i>
-                    <span>Databaser</span>
-                </label>
+                @if(ViewBag.user != null){
+                    <label class="bar icon1" for="nav-account-options">
+                        <i class="fas fa-user-cog"></i>
+                        <span>@ViewBag.user.Name</span>
+                    </label>
+                }
                 <div class="bar icon2"><i class="fas fa-globe-asia"></i></div>
             </div>
             <input type="checkbox" class="nav_mobile_account" name id="nav-account-options" hidden=""/>
@@ -109,29 +114,31 @@
                     <li class="account_li return_li">
                         <label for="nav-account-options">
                             <i class="fas fa-chevron-left"></i>
-                            <div class="account-name">Databaser</div>
+                            <div class="account-name">
+                                @((ViewBag.user != null) ? @ViewBag.user.Name : "Guest")
+                            </div>
                         </label>
                     </li><hr class="mobile_hr"/>
                     <li class="account_li">
                         @*to profile page*@
-                        <a href="#" class="mobile_options">
-                            Account
+                        <a asp-route="profile" class="mobile_options" title="">
+                            Profile
                         </a>
                     </li><hr class="mobile_hr"/>
                     <li class="account_li">
                         @*to favorite page*@
-                        <a href="#" class="mobile_options">
+                        <a href="#" class="mobile_options" title="">
                             Favorite
                         </a>
                     </li><hr class="mobile_hr"/>
                     <li class="account_li">
                         @*to manage page*@
-                        <a href="#" class="mobile_options">
+                        <a href="#" class="mobile_options" title="">
                             Management
                         </a>
                     </li><hr class="mobile_hr"/>
                     <li class="account_li">
-                        <a href="#" class="mobile_options">
+                        <a asp-route="signout" class="mobile_options" title="">
                             Sign out
                         </a>
                     </li><hr class="mobile_hr"/>
@@ -210,17 +217,28 @@
 <ul class="accDrop_pc drop_pc_account" aria-labelledby="accDropdown">
     @*for each here*@
     <div class="row g-1">
-        <a href="#" class="col-3 cate-item">
-            <div class="p-2 item-value">Profile</div>
-        </a>
-        <a href="#" class="col-3 cate-item">
-            <div class="p-2 item-value">Favorite</div>
-        </a>
-        <a href="#" class="col-3 cate-item">
-            <div class="p-2 item-value">Management</div>
-        </a>
-        <a asp-controller="Index" asp-action="Index"class="col-3 cate-item">
-            <div class="p-2 item-value">Log out</div>
-        </a>
+        @if(ViewBag.user != null){
+            <a asp-route="profile" class="col-3 cate-item" title="">
+                <div class="p-2 item-value">Profile</div>
+            </a>
+            <a asp-route="profile" class="col-3 cate-item" title="">
+                <div class="p-2 item-value">Favorite</div>
+            </a>
+            if (ViewBag.user.Role == 1 || ViewBag.user.Role == 2)
+            {
+                <a href="#" class="col-3 cate-item" title="">
+                    <div class="p-2 item-value">Management</div>
+                </a>
+            }
+            <a asp-route="logout" class="col-3 cate-item" title="">
+                <div class="p-2 item-value">Log out</div>
+            </a>
+        }
+        else
+        {
+            <a asp-route="index" class="col-3 cate-item" title="">
+                <div class="p-2 item-value">Sign up</div>
+            </a>
+        }
     </div>
 </ul>

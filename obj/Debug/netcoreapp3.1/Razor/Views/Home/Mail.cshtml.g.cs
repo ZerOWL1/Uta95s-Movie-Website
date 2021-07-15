@@ -26,8 +26,22 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Child;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Ryuu\Desktop\C# Project\CSharpProject\Uta95s-Movie-Website\Views\_ViewImports.cshtml"
+using Uta95s_Movie_Web___BETA_0._1.Models.Entity.Parent;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"708afcad99e6db2e3e24b8938fb5be8100c7c07e", @"/Views/Home/Mail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f9402992eb539c0ba87eefcf16d516dee36f648", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d223b6492fbaf1bdb6fc906766e59671a5d21e5d", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Mail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/sources/images/gif/contact.gif"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -90,7 +104,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                     </p>
                     <div class=""contact-icon"">
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "708afcad99e6db2e3e24b8938fb5be8100c7c07e6380", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "708afcad99e6db2e3e24b8938fb5be8100c7c07e6843", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -133,7 +147,7 @@ using Uta95s_Movie_Web___BETA_0._1.Models;
                     <span class=""circle two""></span>
                     <!--contact mail api-->
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "708afcad99e6db2e3e24b8938fb5be8100c7c07e8935", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "708afcad99e6db2e3e24b8938fb5be8100c7c07e9398", async() => {
                 WriteLiteral("\r\n                        <h3 class=\"title\">Contact us</h3>\r\n                        <div class=\"input-container\">\r\n                            <input type=\"text\" name=\"name\" class=\"input\"");
                 BeginWriteAttribute("required", " required=\"", 2690, "\"", 2701, 0);
                 EndWriteAttribute();

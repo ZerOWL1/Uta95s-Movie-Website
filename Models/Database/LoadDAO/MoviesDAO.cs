@@ -28,32 +28,29 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
 
         public DataTable Get7MoviesLatest()
         {
-            string sql = "SELECT TOP 7 * FROM MOVIES ORDER BY DateADD DESC";
+            string sql = "SELECT TOP 7 * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID";
             return DBContext.GetDataBySQL(sql);
         }
 
-        public DataTable GetTop1()
+        public DataTable GetRandomTop1()
         {
-            string sql = "SELECT TOP 1 * FROM MOVIES ORDER BY DateADD DESC";
-            return DBContext.GetDataBySQL(sql);
-        }
-
-        public DataTable GetRandomMovies()
-        {
-            string sql = "SELECT TOP 6 * FROM MOVIES ORDER BY NEWID()";
+            string sql = "SELECT TOP 1 * FROM MOVIES ORDER BY NEWID()";
             return DBContext.GetDataBySQL(sql);
         }
 
         public DataTable GetRandom6Movies()
         {
-            string sql = "SELECT TOP 6 * FROM MOVIES ORDER BY NEWID()";
+            string sql = "SELECT TOP 6 * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID ORDER BY NEWID()";
             return DBContext.GetDataBySQL(sql);
         }
 
         public DataTable GetDramaMovies()
         {
-            string sql = "SELECT TOP 7 * FROM MOVIES M JOIN MOVIE_GENRE MG "
-                 + "ON M.MID=MG.MID JOIN GENRE G ON MG.GID = G.GID WHERE G.GID = 2";
+            string sql = "SELECT TOP 7 * FROM MOVIES"+
+                         " INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID"+
+                         " INNER JOIN dbo.MOVIE_GENRE ON MOVIE_GENRE.MID = MOVIES.MID"+
+                         " INNER JOIN dbo.GENRE ON GENRE.GID = MOVIE_GENRE.GID WHERE GENRE.GID = '2'"+
+                         " ORDER BY DATEADD DESC";
             return DBContext.GetDataBySQL(sql);
         }
     }

@@ -44,13 +44,16 @@
                 <div class="contact-form">
                     <span class="circle one"></span>
                     <span class="circle two"></span>
-                    <form asp-route="code" method="post" enctype="multipart/form-data">
+                    <form asp-route="verifyCode" method="post" enctype="multipart/form-data">
                         <h3 class="title">Enter Your Code</h3>
+                        <div class="wrong-login alert-danger" asp-validation-summary="ModelOnly"></div>
                         <div class="input-container">
                             <input @*asp-for="randomcode"*@ type="text" name="randomCode" class="input" required="">
                             <label for="">Random Code</label>
                             <span>&nbsp;Random Code&nbsp;</span>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6Lern4AaAAAAAHcDkthqGVzuJ24Qq6_WIGhFSAyn"
+                             data-theme="dark" data-size="normal"></div>
                         <div class="random-btn">
                             <input type="submit" value="Send" class="btn">
                             <a href="#" title="re-send" class="btn">RE-SEND</a>

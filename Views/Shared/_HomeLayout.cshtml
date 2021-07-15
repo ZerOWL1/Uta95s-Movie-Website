@@ -27,10 +27,42 @@
     <link rel="icon" type="image/png" href="~/sources/icon/logo_home2.png">
     <!-- style -->
     <style>
+        .rc-anchor-normal{
+            background: #000 !important; 
+            color: #000 !important; 
+        }
+
+        .g-recaptcha {
+            margin-bottom: 35px;
+            -webkit-transform:scale(1.25);
+            -webkit-transform-origin:0 0;
+        }
+
+        .wrong-login{
+            font-size: .85rem;
+            padding: 5px;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrong-login ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        @@media(max-width: 920px) {
+        .g-recaptcha {
+            -webkit-transform: scale(1.1);
+        }
+        }
+
         @*.owl-carousel {
             -ms-touch-action: pan-y;
             touch-action: pan-y;
         }*@
+         
     </style>
 </head>
 <body>

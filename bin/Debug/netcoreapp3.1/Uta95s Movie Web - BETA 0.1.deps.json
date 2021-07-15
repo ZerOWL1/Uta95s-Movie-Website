@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Uta95s Movie Web - BETA 0.1/1.0.0": {
         "dependencies": {
+          "BCrypt-Official": "0.1.109",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "System.Data.SqlClient": "4.8.2",
           "System.Drawing.Common": "5.0.2",
@@ -306,6 +307,17 @@
         },
         "compile": {
           "Uta95s Movie Web - BETA 0.1.dll": {}
+        }
+      },
+      "BCrypt-Official/0.1.109": {
+        "runtime": {
+          "lib/BCrypt.Net.dll": {
+            "assemblyVersion": "0.1.5073.29922",
+            "fileVersion": "0.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/BCrypt.Net.dll": {}
         }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -3437,6 +3449,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BCrypt-Official/0.1.109": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4iTKqcCn1Eb3fsbbjhv9d9bwswCvEwXavwwo+XTrYAGCfP1YfVZGmRybKWLf2A6BDh+9bZn4zK6AnQaNcqtraA==",
+      "path": "bcrypt-official/0.1.109",
+      "hashPath": "bcrypt-official.0.1.109.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
