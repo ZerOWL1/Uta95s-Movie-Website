@@ -1,0 +1,305 @@
+﻿
+@{
+    ViewData["Title"] = "Category";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+@model MGenre;
+<div class="category-header">
+    <div class="head-left">
+        <span class="span-l disco">Discover</span>
+        <span class="span-l browse">Browse</span>
+    </div>
+    <div class="head-right">
+        <a asp-route="profile" class="span-l" title="" >Favorites</a>
+        <a class="cate-advanced span-l"><i class='bx bx-search-alt-2 bx-tada' ></i>&nbsp;Advanced Search</a>
+    </div>
+</div>
+
+<div class="category-container">
+    <div class="cate-left">
+        <div class="cate-left-body">
+            <div class="sort-cate">
+                <span>Results Search: </span>
+            </div>
+            <div class="row-pricing sort-body" style="margin: 0;">
+                @if (ViewBag.listMovies != null)
+                {
+                    @foreach (var item in ViewBag.listMovies)
+                    {
+                        <div class="sort-item col-card-4 col-c-md-6 col-c-sm-12">
+                            <a asp-route="details" asp-route-id="@item.MID" class="movie-item films-right-item">
+                                <img src="data:image/png;base64,@item.MIMG64" alt="">
+                                <div class="movie-item-content">
+                                    <div class="movie-item-title">
+                                        @item.Title
+                                    </div>
+                                    <div class="movie-infos">
+                                        <div class="movie-info">
+                                            <i class="bx bxs-star"></i>
+                                            <span>9.5</span>
+                                        </div>
+                                        <div class="movie-info">
+                                            <i class="bx bxs-time"></i>
+                                            <span>@item.Length mins</span>
+                                        </div>
+                                        <div class="movie-info">
+                                            <span>@item.Status</span>
+                                        </div>
+                                        <div class="movie-info">
+                                            <span>10+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                }
+                @if (ViewBag.listSearch != null)
+                {
+                    @foreach (var item in ViewBag.listSearch)
+                    {
+                        <div class="sort-item col-card-4 col-c-md-6 col-c-sm-12">
+                            <a asp-route="details" asp-route-id="@item.MID" class="movie-item films-right-item">
+                                <img src="data:image/png;base64,@item.MIMG64" alt="">
+                                <div class="movie-item-content">
+                                    <div class="movie-item-title">
+                                        @item.Title
+                                    </div>
+                                    <div class="movie-infos">
+                                        <div class="movie-info">
+                                            <i class="bx bxs-star"></i>
+                                            <span>9.5</span>
+                                        </div>
+                                        <div class="movie-info">
+                                            <i class="bx bxs-time"></i>
+                                            <span>@item.Length mins</span>
+                                        </div>
+                                        <div class="movie-info">
+                                            <span>HD+</span>
+                                        </div>
+                                        <div class="movie-info">
+                                            <span>10+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                }
+                @*<div class="sort-item col-card-4 col-c-md-6 col-c-sm-12">
+                    <a href="#" class="movie-item films-right-item">
+                        <img src="~/sources/images/slide/slide-demo.jpg" alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Kimetsu no Yaiba
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>24 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>10+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>*@
+                @*<div class="sort-item col-card-4 col-c-md-6 col-c-sm-12">
+                    <a href="#" class="movie-item films-right-item">
+                        <img src="~/sources/images/slide/slide-demo.jpg" alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Kimetsu no Yaiba
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>24 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>10+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="sort-item col-card-4 col-c-md-6 col-c-sm-12">
+                    <a href="#" class="movie-item films-right-item">
+                        <img src="~/sources/images/slide/slide-demo.jpg" alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Kimetsu no Yaiba
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>24 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>10+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="sort-item col-card-4 col-c-md-6 col-c-sm-12">
+                    <a href="#" class="movie-item films-right-item">
+                        <img src="~/sources/images/slide/slide-demo.jpg" alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Kimetsu no Yaiba
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>24 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>10+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>*@
+            </div>
+        </div>
+        <div class="cate-left-pagination">
+            @if (ViewBag.listMovies != null)
+            {
+                <nav class="pagination-container">
+                    <ul class="pagination justify-content-center my-0">
+                        @if (ViewBag.CurrentPage > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-route="category" asp-route-id="@ViewBag.mg.Gid" asp-route-page="@(ViewBag.CurrentPage - 1)"><i class="fas fa-chevron-left"></i>&nbsp;Prev</a>
+                            </li>
+                        }
+                        @for (var i = 1; i <= @ViewBag.totalPage; i++)
+                        {
+                            <li class="page-item @((ViewBag.CurrentPage == (i)) ? "active" : "")">
+                                <a class="page-link" asp-route="category" asp-route-id="@ViewBag.mg.Gid" asp-route-page="@(i)">@(i)</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.CurrentPage < ViewBag.totalPage)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-route="category" asp-route-id="@ViewBag.mg.Gid" asp-route-page="@(ViewBag.CurrentPage + 1)">Next&nbsp;<i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+            @if (ViewBag.listSearch != null)
+            {
+                <nav class="pagination-container">
+                    <ul class="pagination justify-content-center my-0">
+                        @if (ViewBag.CurrentPage > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-route="search" asp-route-id="@ViewBag.txt" asp-route-page="@(ViewBag.CurrentPage - 1)"><i class="fas fa-chevron-left"></i>&nbsp;Prev</a>
+                            </li>
+                        }
+                        @for (var i = 1; i <= @ViewBag.totalPage; i++)
+                        {
+                            <li class="page-item @((ViewBag.CurrentPage == (i)) ? "active" : "")">
+                                <a class="page-link" asp-route="search" asp-route-id="@ViewBag.txt" asp-route-page="@(i)">@(i)</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.CurrentPage < ViewBag.totalPage)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-route="search" asp-route-id="@ViewBag.txt" asp-route-page="@(ViewBag.CurrentPage + 1)">Next&nbsp;<i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+                @* <ul class="pagination justify-content-center my-0">
+                    <li class="page-item">
+                        <a class="page-link prev-link" href="#"><i class="fas fa-chevron-left"></i>&nbsp;Prev</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link next-link" href="#">Next&nbsp;<i class="fas fa-chevron-right"></i></a>
+                    </li>
+                </ul>*@
+        </div>
+    </div>
+    <div class="cate-right">
+        <div class="cate-r-guide">
+            <div class="cate-r-guide-head">
+                <span>Guide For Download</span>
+            </div>
+            <div class="cate-r-guide-body">
+                <div class="guide-item guide-title">
+                    <a asp-route="index">🔥&nbsp;Official Website&nbsp;🔥</a>
+                </div>
+                <div class="guide-item">
+                    <span>🤔&nbsp;[TIPS]&nbsp;🤔</span>
+                    <p><span>Broken links:&nbsp;</span>leave a the comment in the post asking to be fixed</p>
+                    <p><span>Google or Zippyshare 403 Forbidden Links:&nbsp;</span>need a free VPN</p>
+                    <p><span>“ouo” site can’t be reach:&nbsp;</span>need a free VPN</p>
+                </div>
+            </div>
+        </div>
+        <div class="cate-r-social">
+            <div class="cate-r-social-head">
+                <span>Stay Update with Social Media</span>
+            </div>
+            <div class="cate-r-social-body">
+                <a href="https://www.facebook.com/groups/uta95s/" class="cate-r-social-fb cate-r-social-item">
+                    <i class='bx bxl-facebook'></i>
+                    <span class="r-social-icon">Like</span>
+                </a>
+                <a href="https://discord.com/invite/vbtRkSn" class="cate-r-social-dc cate-r-social-item">
+                    <i class='bx bxl-discord'></i>
+                    <span class="r-social-icon">Join</span>
+                </a>
+            </div>
+        </div>
+        <div class="cate-discord-em">
+            <iframe class="titan-dc" src="https://titanembeds.com/embed/559344229520900106" 
+                    frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+

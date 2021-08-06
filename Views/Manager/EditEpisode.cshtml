@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewData["Title"] = "EditEpisode";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="add-container" style="margin: 30px 15px 20px;">
+    <div class="umanager-head">
+        <span>Edit Episode</span>
+    </div>
+    <div class="umanager-form">
+        <div class="" id="collapseUserForm" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+            <div class="row-pricing umanager-form mx-0">
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <div class="add-movie">
+                            @*Edit episode*@
+                            <form action="" class="add-movie-form" enctype="" method="post">
+                                <div class="select-bx mv-bx">
+                                    @*list movie*@
+                                    <label>Movie</label>
+                                    <select class="form-control select-movie-form" name="mid_new">
+                                        @foreach (Movie movie in @ViewBag.movies)
+                                        {
+                                            @if (movie.MID == @ViewBag.episode._Mid)
+                                            {
+                                                <option class="movie-form-item" value="@movie.MID" title="" selected>@movie.Title</option>
+                                            }
+                                            else
+                                            {
+                                                <option class="movie-form-item" value="@movie.MID" title="">@movie.Title</option>
+                                            }
+                                        }
+                                    </select>
+
+                                </div>
+                                <input type="hidden" value="@ViewBag.episode._Mid" name="mid_old">
+                                <input type="hidden" value="@ViewBag.episode._Episode" name="episode_old">
+                                @*episode*@
+                                <div class="episode-bx mv-bx">
+                                    <label>Episode</label>
+                                    <input type="number" class="form-control movie-form-input" name="episode_new" title="" value="@ViewBag.episode._Episode" />
+                                </div>
+
+                                @*episode title*@
+                                <div class="title-bx mv-bx">
+                                    <label>Episode Title</label>
+                                    <input type="text" class="form-control movie-form-input movie-form-text" name="title" title="" value="@ViewBag.episode._Title" />
+                                </div>
+                                @*episode link*@
+                                <div class="episode-link-bx mv-bx">
+                                    <label>Episode Link</label>
+                                    <input type="text" class="form-control movie-form-input" name="epiLink" title="" value="@ViewBag.episode._Episode_link" />
+                                </div>
+                                @*update*@
+                                <div class="submit-btn">
+                                    <input type="submit" value="UPDATE" />
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <div class="umanager-right">
+                        <span class="u-r-title">Important Note</span>
+                        <p class="u-r-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="u-r-item">Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. </p>
+                        <p class="u-r-item">Tempor orci eu lobortis elementum. Eget felis eget nunc lobortis mattis aliquam faucibus. Auctor neque vitae tempus quam. Tristique sollicitudin nibh sit amet.</p>
+                        <p class="u-r-item"> Ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem. Mauris nunc congue nisi vitae suscipit tellus mauris a. Lectus arcu bibendum at varius vel pharetra vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

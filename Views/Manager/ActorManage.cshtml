@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "Actor";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="umanager-container px-4">
+    <div class="umanager-head">
+        <h2 class="mt-4">Actor Management</h2>
+        <span>Actor Control</span>
+        <p>Admin can modify actor at this page. Add, delete, update actor. Please be careful before modified actors.</p>
+    </div>
+<div class="umanager-body">
+<div class="umanager-table">
+@*table*@
+<div class="card mb-4">
+<div class="card-header">
+    <i class="fas fa-table me-1"></i>
+    Actor DataTable
+</div>
+    <div class="card-body">
+        @if (ViewBag.user != null)
+        {
+            @if (ViewBag.user.Role == 1 || ViewBag.user.Role == 2)
+            {
+                <table id="datatablesSimple">
+                    <thead>
+                    <tr>
+                        <th>ActorName</th>
+                        <th>ActorWiki</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (Actor actor in ViewBag.listA)
+                    {
+                        <tr>
+                            <td>@actor.ActorName</td>
+                            <td>@actor.ActorWiki</td>
+                            <td><a asp-route="DeleteA" asp-route-id="@actor.ActorID" title="" class="delete-btn" onclick="return confirm('Do you want to delete this actor?')">Delete&nbsp;<i class="far fa-trash-alt"></i></a></td>
+                            <td><a asp-route="EditA" asp-route-id="@actor.ActorID" title="" class="edit-btn">Edit&nbsp;<i class="far fa-edit"></i></a></td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }else{
+                <span>PLEASE SIGN IN</span>
+            }
+        }
+        else
+        {
+            <span>PLEASE SIGN IN</span>
+        }
+    </div>
+</div>
+</div>
+</div>
+<div class="add-container mx-0">
+    <div class="umanager-head">
+        <span>Actor Modify</span>
+    </div>
+    <div class="umanager-form">
+        <a class="nav-link collapsed add-movie-btn" href="#" data-bs-toggle="collapse" data-bs-target="#collapseActorForm">
+            <div class="sb-nav-link-icon"><i class="far fa-plus-square"></i></div>
+            <span>Add New Actor</span>
+            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseActorForm" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+            <div class="row-pricing umanager-form mx-0">
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <div class="add-movie">
+                        @if (ViewBag.user != null)
+                        {
+                            @if (ViewBag.user.Role == 1 || ViewBag.user.Role == 2)
+                            {
+                                @*add new actor*@
+                                <form asp-route="AManager" class="add-movie-form" enctype="" method="post">
+                                    <div class="actorName-bx mv-bx">
+                                        <label>Actor Name</label>
+                                        <input type="text" class="form-control movie-form-input" name="acName" title=""/>
+                                    </div>
+                                    <div class="actorWiki-bx mv-bx">
+                                        <label>Actor Wiki</label>
+                                        <input type="text" class="form-control movie-form-input" name="acWiki" title=""/>
+                                    </div>
+                                    <div class="submit-btn">
+                                        <input type="submit" value="ADD"/>
+                                    </div>
+                                </form>
+                            }else{
+                                <span>PLEASE SIGN IN</span>
+                            }
+                        }
+                        else
+                        {
+                            <span>PLEASE SIGN IN</span>
+                        }
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <div class="umanager-right">
+                        <span class="u-r-title">Important Note</span>
+                        <p class="u-r-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="u-r-item">Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. </p>
+                        <p class="u-r-item">Tempor orci eu lobortis elementum. Eget felis eget nunc lobortis mattis aliquam faucibus. Auctor neque vitae tempus quam. Tristique sollicitudin nibh sit amet.</p>
+                        <p class="u-r-item"> Ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem. Mauris nunc congue nisi vitae suscipit tellus mauris a. Lectus arcu bibendum at varius vel pharetra vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+

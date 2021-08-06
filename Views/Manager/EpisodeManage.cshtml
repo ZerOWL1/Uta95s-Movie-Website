@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewData["Title"] = "Episode";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="umanager-container px-4">
+    <div class="umanager-head">
+        <h2 class="mt-4">Episode Management</h2>
+        <span>Episode Control</span>
+        <p>Admin can modify movie episode at this page. Add, delete, update episode of movies. Please be careful before modified episodes.</p>
+    </div>
+<div class="umanager-body">
+<div class="umanager-table">
+@*table*@
+<div class="card mb-4">
+<div class="card-header">
+    <i class="fas fa-table me-1"></i>
+    Episode DataTable
+</div>
+<div class="card-body">
+    <table id="datatablesSimple">
+        <thead>
+        <tr>
+            <th>MID</th>
+            <th>Episode</th>
+            <th>Title</th>
+            <th>EpisodeLink</th> 
+            <th>Delete</th> 
+            <th>Edit</th> 
+        </tr>
+        </thead>
+        <tbody>
+        @if (ViewBag.user != null)
+        {
+            @if (ViewBag.user.Role == 1 || ViewBag.user.Role == 2)
+            {
+                @foreach (Episode episode in ViewBag.listE)
+                {
+                    <tr>
+                        <td>@episode._Mid</td>
+                        <td>@episode._Episode</td>
+                        <td class="td-long">
+                            <label class="desc-title" for="desc-check">
+                            </label>
+                            <input type="checkbox" id="desc-check" hidden=""/><br/>
+                            <div class="desc-txt">
+                                @episode._Title
+                            </div>
+                        </td>
+                        <td class="td-long">@episode._Episode_link</td>
+                        <td><a asp-route="DeleteE" asp-route-id="@episode._Mid" asp-route-val="@episode._Episode" title="" class="delete-btn" onclick="return confirm('Do you want to delete this one?')">Delete&nbsp;<i class="far fa-trash-alt"></i></a></td>
+                        <td><a asp-route="EditE" asp-route-id="@episode._Mid" asp-route-val="@episode._Episode" title="" class="edit-btn">Edit&nbsp;<i class="far fa-edit"></i></a></td>
+                    </tr>
+                }
+            }else{
+                <span>PLEASE SIGN IN</span>
+            }
+        }
+        else
+        {
+            <span>PLEASE SIGN IN</span>
+        }
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+<div class="add-container mx-0">
+    <div class="umanager-head">
+        <span>Episode Modify</span>
+    </div>
+    <div class="umanager-form">
+        <a class="nav-link collapsed add-movie-btn" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEpisodeForm">
+            <div class="sb-nav-link-icon"><i class="far fa-plus-square"></i></div>
+            <span>Add New Episode</span>
+            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseEpisodeForm" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+            <div class="row-pricing umanager-form mx-0">
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <div class="add-movie">
+                            @*Add new episode*@
+                            @if (ViewBag.user != null)
+                            {
+                                @if (ViewBag.user.Role == 1 || ViewBag.user.Role == 2)
+                                {
+                                    <form asp-route="EManager" class="add-movie-form" enctype="" method="post">
+                                        <div class="select-bx mv-bx">
+                                            <label>Movie</label>
+                                            <select class="form-control select-movie-form" name="mid_new">
+                                                @foreach (Movie movie in @ViewBag.movies)
+                                                {
+                                                    <option class="movie-form-item" value="@movie.MID" title="">@movie.Title</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        <div class="episode-bx mv-bx">
+                                            <label>Episode</label>
+                                            <input type="number" class="form-control movie-form-input" name="episode" title="" />
+                                        </div>
+                                        <div class="title-bx mv-bx">
+                                            <label>Episode Title</label>
+                                            <input type="text" class="form-control movie-form-input movie-form-text" name="title" title="" />
+                                        </div>
+                                        <div class="episode-link-bx mv-bx">
+                                            <label>Episode Link</label>
+                                            <input type="text" class="form-control movie-form-input" name="epiLink" title="" />
+                                        </div>
+                                        <div class="submit-btn">
+                                            <input type="submit" value="ADD" />
+                                        </div>
+                                    </form>
+                                }
+                                else{
+                                <span>PLEASE SIGN IN</span>
+                                }
+                            }
+                            else
+                            {
+                                <span>PLEASE SIGN IN</span>
+                            }
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <div class="umanager-right">
+                        <span class="u-r-title">Important Note</span>
+                        <p class="u-r-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="u-r-item">Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. </p>
+                        <p class="u-r-item">Tempor orci eu lobortis elementum. Eget felis eget nunc lobortis mattis aliquam faucibus. Auctor neque vitae tempus quam. Tristique sollicitudin nibh sit amet.</p>
+                        <p class="u-r-item"> Ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem. Mauris nunc congue nisi vitae suscipit tellus mauris a. Lectus arcu bibendum at varius vel pharetra vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
