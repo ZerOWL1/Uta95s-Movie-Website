@@ -10,6 +10,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
 {
     public class StatusDAO
     {
+        //get movie status
         public ArrayList GetAllStatus()
         {
             string sql = "SELECT * FROM STATUS";

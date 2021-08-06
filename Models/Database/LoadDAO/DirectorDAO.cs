@@ -98,6 +98,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
         }
 
+        //get list director by director ID
         public List<Director> GetDirectorById(int mid)
         {
             List<Director> list = new List<Director>();

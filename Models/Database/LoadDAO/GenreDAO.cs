@@ -11,12 +11,14 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
 {
     public class GenreDAO
     {
+        //get all genre return data table
         public DataTable GetAllGenre()
         {
             string sql = "SELECT * FROM GENRE";
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get movie by genre ID
         public DataTable GetMovieByGenre(int gid, int currentPage)
         {
             string sql = "SELECT * FROM STATUS INNER JOIN MOVIES ON STATUS.SID = MOVIES.SID"
@@ -27,6 +29,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get dataTable genre Name
         public DataTable GetNameGenre(int gid)
         {
             string sql = "SELECT * FROM STATUS INNER JOIN MOVIES ON STATUS.SID = MOVIES.SID"
@@ -36,6 +39,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.GetDataBySQL(sql);
         }
 
+        //search movie by text input
         public DataTable GetMovieBySearch(string text, int currentPage)
         {
             string sql = "SELECT DISTINCT * FROM ACTOR INNER JOIN MOVIE_ACTOR ON ACTOR.AID = MOVIE_ACTOR.AID"
@@ -47,6 +51,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get movie by title, actor name, director,
         public DataTable GetNumberSearch(string text)
         {
             string sql = "SELECT DISTINCT * FROM ACTOR INNER JOIN MOVIE_ACTOR ON ACTOR.AID = MOVIE_ACTOR.AID"
@@ -126,7 +131,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
         }
 
-        //get genrebyID
+        //get genre by ID
         public Genre GetGenreByID(int gid)
         {
             string sql = "select * from GENRE where GID = " + gid;
@@ -137,6 +142,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return genre;
         }
 
+        //check movie genre exist
         public bool CheckMovieGenreAlreadyExisted(int mid, int gid)
         {
             string sql = "select * from [MOVIE_GENRE] where MID = " + mid + " and GID = " + gid;
@@ -151,6 +157,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
         }
 
+        //add movie genre by movie id, genre id
         public int AddMovieGenre(int mid, int gid)
         {
             string sql = "Insert into [MOVIE_GENRE] Values  (@gid,@mid)";

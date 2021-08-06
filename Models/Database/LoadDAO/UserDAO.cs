@@ -111,7 +111,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
         }
 
-        //get all favor
+        //get all user favor
         public ArrayList GetFavoriteMovie(string uid, int currentPage)
         {
             ArrayList ListFavorite = new ArrayList();
@@ -162,7 +162,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return ListFavorite;
         }
 
-        //delete favor
+        //delete user favor
         public int DeleteFavorite(string uid, int mid)
         {
             string sql = "DELETE FROM FAVORITE_MOVIES WHERE UID = @uid AND MID = @mid";
@@ -361,7 +361,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
         }
 
-
+        //get user return list
         public ArrayList GetAllUser()
         {
             string sql = "SELECT * FROM dbo.USERM";
@@ -379,6 +379,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return list;
         }
 
+        //upgrade user role
         public bool UpgradeUser(int id)
         {
             string sql = "UPDATE dbo.USERM SET Role = '1' WHERE UID = @uid";
@@ -398,6 +399,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
         }
 
+        //de-upgrade user role
         public bool DeUpgrade(int id)
         {
             string sql = "UPDATE dbo.USERM SET Role = '0' WHERE UID = @uid";
@@ -417,6 +419,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
         }
 
+
+        //ban user
         public bool BanU(int id)
         {
             string sql = "UPDATE dbo.USERM SET Role = '-1' WHERE UID = @uid";
@@ -436,6 +440,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
         }
 
+        //un ban user
         public bool UnBanU(int id)
         {
             string sql = "UPDATE dbo.USERM SET Role = '0' WHERE UID = @uid";

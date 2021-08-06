@@ -6932,8 +6932,8 @@
     },
     "DAL Database/1.0.0": {
       "type": "project",
-      "path": "../3. DAL Database/DAL Database/DAL Database.csproj",
-      "msbuildProject": "../3. DAL Database/DAL Database/DAL Database.csproj"
+      "path": "../../C# Project/CSharpProject/3. DAL Database/DAL Database/DAL Database.csproj",
+      "msbuildProject": "../../C# Project/CSharpProject/3. DAL Database/DAL Database/DAL Database.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6952,11 +6952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
+      "projectUniqueName": "C:\\Users\\Ryuu\\Desktop\\New folder\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
       "projectName": "Uta95s Movie Web - BETA 0.1",
-      "projectPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
+      "projectPath": "C:\\Users\\Ryuu\\Desktop\\New folder\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
       "packagesPath": "C:\\Users\\Ryuu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\obj\\",
+      "outputPath": "C:\\Users\\Ryuu\\Desktop\\New folder\\Uta95s-Movie-Website\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ryuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6971,6 +6971,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\3. DAL Database\\DAL Database\\DAL Database.csproj": {
               "projectPath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\3. DAL Database\\DAL Database\\DAL Database.csproj"
@@ -6986,6 +6987,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "BCrypt-Official": {
             "target": "Package",
@@ -7026,7 +7028,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -18,25 +18,29 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
         private SqlConnection con = new SqlConnection();
         private string status = String.Empty;
 
+
+        //get movie episode by id
         public DataTable GetMovieEpisodeById(int id)
         {
             string sql = "SELECT * FROM MOVIE_EPISODE WHERE MID = " + id;
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get episode by id movie, id episode
         public DataTable GetEpisode(int id, int ep)
         {
             string sql = "SELECT * FROM MOVIE_EPISODE WHERE MID = " + id + " AND Episode = " + ep;
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get 4 latest movie
         public DataTable Get4MoviesLatest()
         {
             string sql = "SELECT TOP 4 * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID";
             return DBContext.GetDataBySQL(sql);
         }
 
-        //get all episode
+        //get all episode return list
         public List<Episode> GetAllEpisode()
         {
             List<Episode> listE = new List<Episode>();
@@ -71,6 +75,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
         }
 
+        //get episode obj by movie id, episode id
         public Episode GetEpisodeByMID(int MID, int eposide)
         {
             string sql = "select * from MOVIE_EPISODE where MID = " + MID + " and Episode = " + eposide;

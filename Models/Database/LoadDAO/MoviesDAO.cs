@@ -32,30 +32,35 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return Convert.ToInt32(row["count"]);
         }
 
+        //get AllMovies Return DataTable
         public DataTable GetALLMovies()
         {
             string sql = "SELECT * FROM MOVIES ORDER BY DateADD DESC";
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get 7 Latest Movies
         public DataTable Get7MoviesLatest()
         {
             string sql = "SELECT TOP 7 * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID ORDER BY DATEADD DESC";
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get Random Top 1
         public DataTable GetRandomTop1()
         {
             string sql = "SELECT TOP 1 * FROM MOVIES ORDER BY NEWID()";
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get Random Top 6
         public DataTable GetRandom6Movies()
         {
             string sql = "SELECT TOP 6 * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID ORDER BY NEWID()";
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get Drama Movies
         public DataTable GetDramaMovies()
         {
             string sql = "SELECT TOP 7 * FROM MOVIES" +
@@ -66,6 +71,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get Movies By MovieID
         public DataTable GetMoviesById(int id)
         {
             string sql = "SELECT * FROM ACTOR INNER JOIN MOVIE_ACTOR ON ACTOR.AID = MOVIE_ACTOR.AID"
@@ -76,12 +82,14 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get Movies Info
         public DataTable getMovieInfo()
         {
             string sql = "SELECT * FROM MOVIES INNER JOIN dbo.STATUS ON STATUS.SID = MOVIES.SID ORDER BY MID";
             return DBContext.GetDataBySQL(sql);
         }
 
+        //get All Movies Return List
         public List<Movie> GetAllMovies()
         {
             List<Movie> listMovies = new List<Movie>();
@@ -97,6 +105,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return listMovies;
         }
 
+        //get Movie with Images
         public MSBinary GetAllMovieInforByID(int ID)
         {
             MSBinary mBinary = new MSBinary();
@@ -132,6 +141,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return mBinary;
         }
 
+        //insert movies
         public async Task<int> AddNewMovie(ArrayList arrayList, IFormFile MIMGByte, IFormFile MBigImgBytes)
         {
             try
@@ -183,6 +193,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
 
         }
+        
+        //check favor movie exist
         public bool checkFavoriteExist(int mid)
         {
             try
@@ -204,6 +216,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 throw;
             }
         }
+
+        //delete movie favorite by movies ID
         public int DeleteMovie_Favorite(int id)
         {
             if (checkFavoriteExist(id))
@@ -219,6 +233,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 return 1;
             }
         }
+        
+        //delete movie
         public int DeleteMovie(int id)
         {
             int rs = 0;
@@ -240,6 +256,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
 
             return rs;
         }
+        
+        //check movie_actor exist
         public bool checkMovieActorExist(int mid)
         {
             try
@@ -261,6 +279,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 throw;
             }
         }
+        
+        //delete movie_actor
         public int DeleteMovie_Actor(int id)
         {
             try
@@ -281,10 +301,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 throw;
             }
 
         }
+        
+        //check movie_genre exist
         public bool checkMovieGenreExist(int mid)
         {
             try
@@ -306,6 +329,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 throw;
             }
         }
+        
+        //delete movie_genre
         public int DeleteMovie_Genre(int id)
         {
             try
@@ -326,10 +351,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 throw;
             }
 
         }
+        
+        //check movie_episode exist
         public bool checkMovieEpisodeExist(int mid)
         {
             try
@@ -351,6 +379,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 throw;
             }
         }
+        
+        //delete movie_episode
         public int DeleteMovie_Ep(int id)
         {
             try
@@ -371,10 +401,13 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 throw;
             }
 
         }
+        
+        //check movie_director exist
         public bool checkMovieDirectorExist(int mid)
         {
             try
@@ -396,6 +429,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 throw;
             }
         }
+       
+        //delete movie_director
         public int DeleteMovie_Director(int id)
         {
             try
@@ -412,11 +447,17 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
                 {
                     rs = 1;
                 }
+
                 return rs;
             }
-            catch (Exception e) { throw; }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                throw;
+            }
         }
 
+        //edit movie by movie id
         public async Task<bool> EditMovie(int id, ArrayList list, IFormFile img, IFormFile bigImg)
         {
             bool check = false;
@@ -639,6 +680,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return check;
         }
 
+        //add movie_director
         public int AddMovie_Director(ArrayList arrayList)
         {
             string sql = "Insert into MOVIE_DIRECTOR Values (@mid, @did)";
@@ -653,6 +695,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
 
         }
+        
+        //check movie_director exist
         public bool CheckMovie_DirectorAlreadyExisted(int mid, int did)
         {
             string sql = "select * from MOVIE_DIRECTOR where DID = '" + did + "' AND MID = '" + mid + "'";

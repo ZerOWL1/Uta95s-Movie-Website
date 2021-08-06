@@ -25,6 +25,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
         private Captcha_Verification captcha;
         private string status = string.Empty;
         private string mess = String.Empty;
+
+        // generate constructor injection
         public IndexController()
         {
             userDAO = new UserDAO();
@@ -32,6 +34,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
             captcha = new Captcha_Verification();
         }
 
+        // login
         [HttpPost]
         [Route("/login", Name = "login")]
         public IActionResult Login(User user)
@@ -118,6 +121,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
             }
         }
 
+        //sign up
         [HttpPost]
         [Route("/signup", Name = "signup")]
         public IActionResult Signup(User user)
@@ -218,6 +222,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
             }
         }
 
+        //inde page
         [Route("", Name = "index")]
         [Route("/index", Name = "default")]
         public IActionResult Index(User user, string mess)

@@ -18,6 +18,8 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
         private string status = String.Empty;
         private SqlConnection con = new SqlConnection();
 
+
+        //get actor by actor id return data table
         public DataTable GetActorById(int id)
         {
             String sql = "SELECT * FROM  ACTOR INNER JOIN MOVIE_ACTOR ON MOVIE_ACTOR.AID = ACTOR.AID"
@@ -98,6 +100,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
         }
 
+        //add movie_actor
         public int AddMovieActor(int aid, int mid)
         {
             string sql = "Insert into [MOVIE_ACTOR] Values  (@aid,@mid)";
@@ -115,6 +118,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Database.LoadDAO
             return DBContext.ExecuteSQL(sql, sqlParameters);
         }
 
+        //check movie_actor exist
         public bool checkMovieActorExist(int aid,int mid)
         {
             string sql = "select * from MOVIE_ACTOR where AID = " + aid + " and MID = " + mid;

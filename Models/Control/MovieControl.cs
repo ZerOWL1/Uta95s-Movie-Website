@@ -62,7 +62,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             return listMoviesRandom6;
         }
 
-        //Lastest 7 to slider
+        //Latest 7 to slider
         public ArrayList MoviesLatestUpdate()
         {
             ArrayList listMoviesLatestUpdate = new ArrayList();
@@ -195,8 +195,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             }
         }
 
-
-        //index page
+        //index slider img
         public ArrayList IndexSliderImages()
         {
             ArrayList listImg = new ArrayList();
@@ -221,6 +220,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             return listImg;
         }
 
+        //index slider random img
         public ArrayList IndexSliderRandomImages()
         {
             ArrayList listRandom = new ArrayList();
@@ -245,7 +245,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             return listRandom;
         }
 
-
+        //get movie episode by movie id
         public ArrayList GetMovieEpisodeById(int id)
         {
             ArrayList listEpisodeMovie = new ArrayList();
@@ -271,6 +271,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             return listEpisodeMovie;
         }
 
+        //get 4 latest movie
         public ArrayList Get4MoviesLatest()
         {
             ArrayList list4LatestUpdate = new ArrayList();
@@ -317,7 +318,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             return list4LatestUpdate;
         }
 
-
+        //get episode by movie id and movie episode
         public Episode GetEpisode(int id, int epi)
         {
             try
@@ -338,7 +339,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             }
         }
 
-
+        //get list movies
         public ArrayList GetAllMovie()
         {
             ArrayList listMovies= new ArrayList();

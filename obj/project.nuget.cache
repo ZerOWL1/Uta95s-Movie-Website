@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9eWSE2nCtOe2Q+5wHNYaRpyaHSxd5ihLEQB0fS33pKrur6Qo6tvz1TJipBYxqpopR1um9NKnG1IxdAt6A7BlFw==",
+  "dgSpecHash": "Mzk1kR2xLytJx10HuXxmClGVm88DRc7+6s4gsvPmvnNc1NUoJctqpQsNp4v+7sCGmpQ79h48gbF5frdU2eVmUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ryuu\\Desktop\\C# Project\\CSharpProject\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
+  "projectFilePath": "C:\\Users\\Ryuu\\Desktop\\New folder\\Uta95s-Movie-Website\\Uta95s Movie Web - BETA 0.1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryuu\\.nuget\\packages\\bcrypt-official\\0.1.109\\bcrypt-official.0.1.109.nupkg.sha512",
     "C:\\Users\\Ryuu\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

@@ -25,6 +25,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
         private StatusDAO sDAO;
         private string msg = String.Empty;
 
+        //generate constructor injection
         public ManagerController()
         {
             sDAO = new StatusDAO();
@@ -151,6 +152,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return RedirectToRoute("MManager");
             }
             return RedirectToRoute("MManager");

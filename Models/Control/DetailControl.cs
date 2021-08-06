@@ -16,6 +16,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
         private static MoviesDAO mDAO = new MoviesDAO();
         private string status = string.Empty;
 
+        //get movie base64 by movie ID
         public MBase64_MAD getMovieById(int id)
         {
             try
@@ -64,6 +65,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Models.Control
             }
         }
 
+        //get list actor by ID
         public ArrayList getActorById(int id)
         {
             ArrayList listActor = new ArrayList();

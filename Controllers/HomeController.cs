@@ -30,7 +30,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
         private Captcha_Verification captcha;
         private string mess = String.Empty;
 
-        private string status = string.Empty;
+        // generate constructor injection
         public HomeController(ILogger<HomeController> logger)
         {
             captcha = new Captcha_Verification();
@@ -218,6 +218,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
                             }
                             else
                             {
+                                HttpContext.Session.Remove("changePass");
                                 return RedirectToAction("Index", "Index");
                             }
                         }
@@ -226,10 +227,10 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
                             ModelState.AddModelError("", "Invalid Code");
                             return View("RandomCode");
                         }
-                        HttpContext.Session.Remove("changePass");
                     }
                     else
                     {
+                        HttpContext.Session.Remove("changePass");
                         ModelState.AddModelError("", "Session Error!!");
                         return RedirectToAction("Index", "Index");
                     }
@@ -818,7 +819,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers
                 return Details(mID, mess);
             }
 
-            return RedirectToAction("Home", "Home");
+            //return RedirectToAction("Home", "Home");
         }
     }
 }

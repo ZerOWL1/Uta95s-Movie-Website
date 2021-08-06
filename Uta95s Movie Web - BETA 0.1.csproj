@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\3. DAL Database\DAL Database\DAL Database.csproj" />
+    <ProjectReference Include="..\..\C# Project\CSharpProject\3. DAL Database\DAL Database\DAL Database.csproj" />
   </ItemGroup>
 
 </Project>
