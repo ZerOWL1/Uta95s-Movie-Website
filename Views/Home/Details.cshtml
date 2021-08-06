@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+@model MBase64_MAD
+
+<div class="detail">
+    <div class="detail-header">
+        <div class="detail-header-left">
+            <a title="" asp-route="home" class="detail-back">
+                <i class="fas fa-chevron-left"></i>
+                Back to Home
+            </a>
+            <a class="random-movie" href="#" title="">@Model.Title</a>
+        </div>
+        <div class="detail-header-right">
+            <div class="detail-favor">
+                <i class='bx bx-bookmark-alt'></i>
+                <span>Favorites</span>
+            </div>
+            <div class="detail-rate">
+                <form asp-route="home" method="post" enctype="multipart/form-data">
+                    <i class="far fa-thumbs-up like-btn"></i>
+                    <select @*asp-for="rate"*@ name="rate" class="select-rate" title="">
+                        <option class="option-item">&nbsp;default&nbsp;</option>
+                        <option value="" class="option-item">1⭐</option>
+                        <option value="" class="option-item">2⭐</option>
+                        <option value="" class="option-item">3⭐</option>
+                        <option value="" class="option-item">4⭐</option>
+                        <option value="" class="option-item">5⭐</option>
+                        <option value="" class="option-item">6⭐</option>
+                        <option value="" class="option-item">7⭐</option>
+                        <option value="" class="option-item">8⭐</option>
+                        <option value="" class="option-item">9⭐</option>
+                        <option value="" class="option-item">10⭐</option>
+                    </select>
+                    <input class="rate-submit" type="submit" value="submit" hidden=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="detail-container">
+        <div class="detail-left">
+            <div class="left-header">
+                @Model.Title
+            </div>
+            <div class="left-body">
+                <div class="left-body-img" style="background: url(data:image/png;base64,@Model.MBigIMG64); background-size: cover;">
+                </div>
+                <div class="left-body-content">
+                    <div class="content-head">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Viverra tellus in hac 
+                        habitasse platea dictumst vestibulum rhoncus.
+                    </div>
+                    <div class="row-pricing content-infor" style="margin: 0">
+                        <div class="col-card-4 col-c-md-4 col-c-sm-12 infor-item">
+                            <div class="infors infor-col1">
+                                <p class="col-title" style="padding-left: 0;"><i class="far fa-flag"></i>&nbsp;Nationality</p>
+                                <p>@Model.DNational</p>
+                            </div>
+                            <div class="infors infor-col2">
+                                <p class="col-title" style="padding-left: 0;"><i class="fas fa-language"></i>&nbsp;Languages</p>
+                                <p>@Model.Language</p>
+                            </div>
+                        </div>
+                        <div class="col-card-4 col-c-md-4 col-c-sm-12 infor-item">
+                            <div class="infors infor-col1">
+                                <p class="col-title" style="padding-left: 0;"><i class="far fa-building"></i>&nbsp;Publisher</p>
+                                @foreach (var item in ViewBag.listDirector)
+                                {
+                                    <p>@item.DName</p>
+                                }
+                            </div>
+                            <div class="infors infor-col2">
+                                <p class="col-title" style="padding-left: 0;"><i class="fas fa-users"></i>&nbsp;Actor</p>
+                                @foreach (var item in ViewBag.listActor)
+                                {
+                                    <p>@item.ActorName</p>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-card-4 col-c-md-4 col-c-sm-12 infor-item">
+                            <div class="infors infor-col1">
+                                <p class="col-title" style="padding-left: 0;"><i class="fas fa-upload"></i>&nbsp;Release</p>
+                                <p>@Model.Release</p>
+                            </div>
+                            <div class="infors infor-col2">
+                                <p class="col-title" style="padding-left: 0;"><i class="fas fa-download"></i>&nbsp;Download</p>
+                                <p><a class="gg-drive" href="@Model.Download"><i class="fab fa-google-drive"></i>&nbsp;Google Drive</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-decs">
+                        <div class="content-title">@Model.Title</div>
+                        <div class="content-description">
+                            @Model.Desc
+                        </div>
+                    </div>
+                    <div class="content-trailer">
+                        <div class="trailer-title">Trailer</div>
+                        <div class="yt-video">
+                            <iframe class="yt-frame" width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/@Model.Trailer">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="content-more-info">
+                        <div class="more-infor-title">
+                            More Information
+                        </div>
+                        <div class="more-infor">
+                            <a href="https://www.imdb.com/" title="IMDB"><i class="fab fa-imdb"></i></a>
+                            <a href="https://www.baidu.com/" title="Baidu"><i class="fas fa-paw"></i></a>
+                            <a href="https://www.reddit.com/" title="Reddit"><i class="fab fa-reddit"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-body-footer">
+                    <div class="fb-cmt-title">Share us your opinion. Even report dead links</div>
+                    <div class="fb-comment-movie">
+                        <div id="fb-root"></div>
+                        <div class="fb-comments"
+                             data-href="https://localhost:44309/details?mid=@Model.MID"
+                             data-width="100px" data-numposts="100"
+                             data-mobile="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-right">
+            <div class="detail-right-content">
+                <div class="detail-right-img" style="background: url(data:image/png;base64,@Model.MIMG64); background-size: cover;">
+                </div>
+                <div class="fb-share-btn">
+                    <div class="fb-share-button" data-href="http://democomment.0hi.me/"
+                         data-layout="button_count" data-size="small">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocalhost%3A44309%2Fdetails&amp;src=sdkpreparse" 
+                           class="fb-xfbml-parse-ignore">
+                            Share
+                        </a>
+                    </div>
+                </div>
+                <a asp-route="films" asp-route-id="@Model.MID" title="" class="watch-films-btn">Watch Movie</a>
+                @if(ViewBag.user != null){
+                    <a asp-route="favorite" asp-route-mID="@Model.MID" class="add-favor-btn">Add to Favorite</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

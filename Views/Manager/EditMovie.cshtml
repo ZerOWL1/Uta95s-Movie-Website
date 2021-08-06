@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "EditMovie";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+@model MSBinary
+<div class="add-container" style="margin: 30px 15px 20px;">
+    <div class="umanager-head">
+        <span>Edit Movie</span>
+    </div>
+    <div class="umanager-form">
+        <div class="umanager-form-container" id="collapseUserForm">
+            <div class="row-pricing umanager-form mx-0">
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <div class="add-movie">
+                            <form asp-route="EditM" class="add-movie-form" enctype="multipart/form-data" method="post">
+                                <div class="select-bx mv-bx">
+                                    <label>Movie Genre</label>
+                                    <input type="text" name="id" hidden="" value="@ViewBag.MovieInfor.MID"/>
+                                    <select class="form-control select-movie-form" name="status">
+                                        @foreach (Status st in  ViewBag.Status)
+                                        {
+                                            <option class="movie-form-item" value="@st.Sid" title="">@st.Sname</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="title-bx mv-bx">
+                                    <label>Movie Title</label>
+                                    <input type="text" class="form-control movie-form-input" name="title" title="" value="@ViewBag.MovieInfor.Title" required=""/>
+                                </div>
+                                <div class="desc-bx mv-bx">
+                                    <label>Description</label>
+                                    <textarea class="form-control movie-form-input movie-form-text" name="description" title="" required="">@ViewBag.MovieInfor.Desc</textarea>
+                                </div>
+                                <div class="episode-content-bx mv-bx">
+                                    <label>Total Episode</label>
+                                    <input type="number" class="form-control movie-form-input" name="totalEsp" value="@ViewBag.MovieInfor.TotalEsp" title="" required=""/>
+                                </div>
+                                <div class="nation-bx mv-bx">
+                                    <label>Nationality</label>
+                                    <input type="text" class="form-control movie-form-input" name="nationality" value="@ViewBag.MovieInfor.Nation" title="" required=""/>
+                                </div>
+                                <div class="language-bx mv-bx">
+                                    <label>Language</label>
+                                    <input type="text" class="form-control movie-form-input" name="language" value="@ViewBag.MovieInfor.Language" title="" required=""/>
+                                </div>
+                                <div class="release-bx mv-bx">
+                                    <label>Release</label>
+                                    <input type="number" class="form-control movie-form-input" name="release" value="@ViewBag.MovieInfor.Release" title="" required=""/>
+                                </div>
+                                <div class="img-bx mv-bx">
+                                    <label>Movie IMG</label><br/>
+                                    <input type="file" asp-for="IMG" class="form-control-file movie-form-input" accept="image/png,image/jpeg,image/jpg" title=""/>
+                                </div>
+                                <div class="bg-img-bx mv-bx">
+                                    <label>Big IMG</label><br/>
+                                    <input type="file" asp-for="BigIMG" class="form-control-file movie-form-input" accept="image/png,image/jpeg,image/jpg" title=""/>
+                                </div>
+                                <div class="trailer-bx mv-bx">
+                                    <label>Trailer</label>
+                                    <input type="text"  class="form-control movie-form-input" name="trailer" value="@ViewBag.MovieInfor.Trailer" title="" required=""/>
+                                </div>
+                                <div class="length-bx mv-bx">
+                                    <label>Length</label>
+                                    <input type="text" class="form-control movie-form-input" name="length" value="@ViewBag.MovieInfor.Length" title="" required=""/>
+                                </div>
+                                <div class="submit-btn">
+                                    <input type="submit" value="UPDATE"/>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <div class="umanager-right">
+                        <span class="u-r-title">Important Note</span>
+                        <p class="u-r-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="u-r-item">Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. </p>
+                        <p class="u-r-item">Tempor orci eu lobortis elementum. Eget felis eget nunc lobortis mattis aliquam faucibus. Auctor neque vitae tempus quam. Tristique sollicitudin nibh sit amet.</p>
+                        <p class="u-r-item"> Ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem. Mauris nunc congue nisi vitae suscipit tellus mauris a. Lectus arcu bibendum at varius vel pharetra vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

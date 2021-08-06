@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "MDirector";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="add-container" style="margin: 30px 15px 20px;">
+    <div class="umanager-head">
+        <span>Add Movie Director</span>
+    </div>
+    <div class="umanager-form">
+        <div class="" id="collapseUserForm" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+            <div class="row-pricing umanager-form mx-0">
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <div class="add-movie">
+                            @*Edit episode*@
+                            <form asp-route="MDirector" class="add-movie-form" enctype="" method="post">
+                                <div class="select-bx mv-bx">
+                                    @*list movie*@
+                                    <label>Movie Name</label>
+                                    <select class="form-control select-movie-form" name="mid">
+                                        @foreach (var item in ViewBag.movie)
+                                        {
+                                            <option class="form-item" value="@item.MID" title="">@item.Title</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="select-bx mv-bx">
+                                    @*list movie*@
+                                    <label>Director Name</label>
+                                    <select class="form-control select-movie-form" name="did">
+                                        @foreach (var item in ViewBag.director)
+                                        {
+                                            <option class="form-item" value="@item.Did" title="">@item.DName</option>
+                                        }
+                                    </select>
+                                </div>
+                                @*update*@
+                                <div class="submit-btn">
+                                    <input type="submit" value="ADD"/>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-card-6 col-c-sm-12 umanager-col">
+                    <div class="umanager-right">
+                        <span class="u-r-title">Important Note</span>
+                        <p class="u-r-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="u-r-item">Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. </p>
+                        <p class="u-r-item">Tempor orci eu lobortis elementum. Eget felis eget nunc lobortis mattis aliquam faucibus. Auctor neque vitae tempus quam. Tristique sollicitudin nibh sit amet.</p>
+                        <p class="u-r-item"> Ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem. Mauris nunc congue nisi vitae suscipit tellus mauris a. Lectus arcu bibendum at varius vel pharetra vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
