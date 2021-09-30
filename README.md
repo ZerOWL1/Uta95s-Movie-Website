@@ -21,3 +21,6 @@ VALUES  (
 
 INSERT INTO dbo.DEMOBO ( name, images, videoLink, [date] ) VALUES  ( N'Test2', NULL, NULL, GETDATE())
 DELETE dbo.MOVIES WHERE MID = 1
+
+
+SQL - Data - More Infor (https://drive.google.com/drive/folders/1vlZfhhMwfEi59rHcOIzpBTbCoUrRmt3R?usp=sharing)
