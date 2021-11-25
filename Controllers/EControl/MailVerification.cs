@@ -22,7 +22,7 @@ namespace Uta95s_Movie_Web___BETA_0._1.Controllers.EControl
             bool sendMail = false;
             try
             {
-                string pass = "pokemonlol123478kid";
+                string pass = "###";
                 var smtpClient = new SmtpClient();
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.Port = 587;
